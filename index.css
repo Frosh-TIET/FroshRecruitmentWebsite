@@ -1,17 +1,10 @@
 body{
-    background-color: #000000;
+    background-color: #2B32B2;
   padding: 0px;
   margin: 0px;
   overflow:auto;
 }
 
-/* #gradient
-{
- width: 78.9rem;
- height: 50rem;
- padding: 0px;
- margin: 0px;
-} */
 ::-webkit-scrollbar {
     width: 8px; /* Width of the scrollbar */
   }
