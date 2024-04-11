@@ -19,48 +19,48 @@
         <img src="./images/FROSH LOGO 23 AI white-png.png" alt="FROSH LOGO" class="logo">
         <!-- Form -->
         <form>
-                <div class="card-inner">
-                    <div class="form-labels">Personel Details -></div>
+            <div class="card-inner">
+                    <div class="registration">REGISTRATION FORM</div>
+                    <div class="form-labels">Personel Details</div>
+
+                <div class="content-personeldetails">
                     <div class="formentry">
                         <label for="fname" id="textefft">Full Name</label>
-                        <input type="text" id="name" placeholder="" name="" required>
+                        <input type="text" id="fname" placeholder="Your Full Name" name="userName" required>
                     </div>
-
                     <div class="formentry">
-                        <label for="femail" id="textefft">Thapar Email ID</label>
-                        <input type="Email" id="email" placeholder="" name="email" required>
-
+                        <label for="femail" id="textefft">Thapar EmailID</label>
+                        <input type="Email" id="femail" placeholder="@thapar.edu only" name="userEmail" required>
                     </div>
-
                     <div class="formentry">
                         <label for="froll" id="textefft">Roll Number</label>
-                        <input type="tel" id="rollno" placeholder="" name="application" minlength="9" maxlength="9"
-                            required>
+                        <input type="number" id="froll" placeholder="Thapar roll number" name="userRollnumber" minlength="9" maxlength="9" required>
                     </div>
-
                     <div class="formentry">
                         <label for="fnumber" id="textefft">Phone Number</label>
-                        <input type="tel" placeholder="" id="phnumber" name="phone" minlength="10" maxlength="10" required>
+                        <input type="tel" placeholder="Whatsapp Number" id="fnumber" name="userPhone" minlength="10" maxlength="10" required>
                     </div>
                     <div class="formentry">
                         <label for="fbranch" id="textefft">Branch</label>
-                        <input type="text" id="branch" placeholder="" name="branch" required>
+                        <input type="text" id="fbranch" placeholder="e.g. Electronics and Computer" name="userBranch" required>
                     </div>
                     <div class="formentry">
                         <label for="fcg" id="textefft">CGPA</label>
-                        <input type="number" id="cgpa" placeholder="" name="cg" required>
+                        <input type="number" id="fcg" placeholder="e.g. 8.36" name="userCg" required>
                     </div>
                     <div class="formentry">
-                        <label for="fch" id="textefft">Hostel (Write DS if Day Scholar)</label>
-                        <input type="text" id="hostel" placeholder="" name="hostel" required>
+                        <label for="fhostel" id="textefft">Hostel</label>
+                        <input type="text" id="fhostel" placeholder="Write DS if Day Scholar" name="userHostel" required>
                     </div>
+                </div>
+
                     <div class="tab">
-                        <div class="formbody">
-                            <h2>Answer the following questions</h2>
-                            <h3>Rate yourself on the following criteria, 1 being the lowest and 5 being the highest</h3>
-                            <br>
+                        <h2 class="form-labels">Answer the following questions</h2>
+                        <h3 class="content-radio">Rate yourself on the following criteria {1 being the lowest and 5 being the highest}</h3>
+                        <br>
+                        <div class="form-radiobtns">
                             <div class="formentryRadio">
-                                <label for="" id="no">Adaptability<br /></label>
+                                <label for="" id="no">Adaptability<br/></label>
                                 <div class="radio">
                                     <label for="no" class="no">1</label>
                                     <input class="short" type="radio" placeholder="" name="leadership" value="1"
@@ -167,70 +167,74 @@
                             </div>
                             <br>
                             <br>
+                        </div>
 
+                        <h2 class="form-labels">Questions</h2>
+                        <div class="content-questions">
                             <div class="formentryquestions">
-                                <label for="" id="textefft">Why do you want to join Frosh?</label>
+                                <label for="" id="textefft">Why do you want to join Frosh?</label><br>
                                 <input type="text" name="why" required id="q1" cols="50" rows="8"></input>
                             </div>
 
                             <div class="formentryquestions">
-                                <label for="" id="textefft">What are your soft skills and hard skills?</label>
+                                <label for="" id="textefft">What are your soft skills and hard skills?</label><br>
                                 <input type="text" name="skills" required id="q2" cols="50" rows="8"></input>
                             </div>
 
                             <div class="formentryquestions">
                                 <label for="" id="textefft">What are some areas of interest you would like to explore during
-                                    Frosh?</label>
+                                    Frosh?</label><br>
                                 <input type="text" name="unique" required id="q3" cols="50" rows="8"></input>
                             </div>
 
                             <div class="formentryquestions">
-                                <label for="" id="textefft">What improvements you would have made in Frosh 2022?</label>
+                                <label for="" id="textefft">What improvements you would have made in Frosh 2022?</label><br>
                                 <input type="text" name="society" required id="q4" cols="50" rows="8"></input>
                             </div>
 
                             <div class="formentryquestions">
                                 <label for="" id="textefft">If you get selected, what would you like to implement in Frosh
-                                    2023?</label>
+                                    2023?</label><br>
                                 <input type="text" name="improve" required id="q5" cols="50" rows="8"></input>
                             </div>
 
                             <div class="formentryquestions">
                                 <label for="" id="textefft">Which societies are you a part of and describe your contribution
                                     to
-                                    them?</label>
+                                    them?</label><br>
                                 <input type="text" name="new" required id="q6" cols="50" rows="8"></input>
                             </div>
 
                             <div class="formentryquestions">
                                 <label for="" id="textefft">Specify who according to you should be the part of frosh and
-                                    why?</label>
+                                    why?</label><br>
                                 <input type="text" name="who" required id="q7" cols="50" rows="8"></input>
                             </div>
 
                             <div class="formentryquestions">
                                 <label for="" id="textefft">Specify who according to you should not be the part of frosh and
-                                    why?</label>
+                                    why?</label><br>
                                 <input type="text" name="whom" required id="q8" cols="50" rows="8"></input>
                             </div>
-
                         </div>
                     </div>
 
                     <div class="tab">
                         <div class="formbody">
-                            <h2>Do you want to make a talent entry?</h2>
-                            <div class="buttons">
+                            <h2 class="form-labels">Do you want to make a talent entry?</h2>
+                            <div class="form-buttons">
                                 <button id="show-button-1" onclick=" toggleContent(1)" class="startlink">YES</button>
                                 <button id="show-button-2" onclick=" toggleContent(2)" class="startlink">NO</button>
                             </div>
-                            <div class="formentry" id="talent" style="display:none;">
+                            <div class="form-buttons" id="talent" style="display:none;">
                                 <label for="" id="textefft">Paste Google Drive link here</label>
                                 <input type="text" name="" id="talentSubmission"></input>
                                 <br>
-                            <button type="submit" class="startlink" id="talentbutton">SUBMIT</button>
+                                <button type="submit" class="startlink" id="talentbutton">SUBMIT</button>
+                            </div>
                         </div>
                     </div>
+                </div>
             </form>
     </div>
     
