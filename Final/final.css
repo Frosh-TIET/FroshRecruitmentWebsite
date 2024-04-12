@@ -1,3 +1,23 @@
+@font-face {
+  font-family: Lora;
+  src: url(./fonts/Lora-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: Domine;
+  src: url(./fonts/Domine-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: Maitree_Medium;
+  src: url(./fonts/Maitree-Medium.ttf);
+}
+
+@font-face {
+  font-family: Maitree_SemiBold;
+  src: url(./fonts/Maitree-SemiBold.ttf);
+}
+
 ::-webkit-scrollbar {
   width: 10px; /* Width of the scrollbar */
 }
@@ -45,6 +65,16 @@ body {
   z-index: 0;
 }
 
+#video-background {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
 canvas {
   display: block;
   width: 100%;
@@ -75,15 +105,17 @@ canvas {
 
 /* Form */
 form {
-  margin-top: 100px;;
-  height: 50vh;
+  margin-top: -5px;
+  height: 45vh;
   width: 60vw;
-  background-color: rgba(0, 0, 0, 0.13);
+  align-content: center;
+  align-self: center;
+  background-color: #2b32b2;
   position: absolute;
-  border: 5px solid #ffff;
-  border-radius: 10px;
+  /* border: solid #ffff; */
+  border-radius: 30px;
   backdrop-filter: blur(65px);
-  box-shadow: 0 0 40px rgba(30, 30, 30, 0.6);
+  box-shadow: 0 0 80px rgba(30, 30, 30, 0.6);
   padding: 50px 35px;
 }
 
@@ -100,7 +132,8 @@ form {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: radial-gradient(
+}
+/* background-image: radial-gradient(
       circle at 30% 86%,
       rgba(255, 255, 255, 0.03) 0%,
       rgba(255, 255, 255, 0.03) 8%,
@@ -178,97 +211,192 @@ form {
       transparent 96%
     ),
     linear-gradient(135deg, rgb(23, 233, 173), rgb(29, 24, 208));
-}
+} */
 
 /* FORM inside */
-.registration{
-  color: rgb(0, 4, 36);
+.registration {
+  color: rgb(255, 255, 255);
+  font-family: Lora;
   font-weight: bold;
-  font-size: 35px;
+  font-size: 30px;
   display: flex;
   justify-content: center;
+  justify-self: center;
+  text-decoration: underline;
+  text-align: center;
 }
 
 .form-labels {
+  font-family: Domine;
+  font-weight: lighter;
   margin-top: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   color: rgb(255, 255, 255);
-  font-size: 28px;
+  font-size: 25px;
   display: flex;
   justify-content: center;
-  font-weight:bold;
 }
 
-.content-personeldetails{
+.content-personeldetails {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-right: 60px;
-  /* gap: 10px; */
 }
 
 .formentry {
+  /* font-style:Maitree_SemiBold; */
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 10px; /* Adjust margin as needed */
+  margin-bottom: 5px;
 }
 
 .formentry label {
   flex-basis: 25%; /* Adjust width as needed */
   margin-right: 10px; /* Adjust margin as needed */
-  text-align:right; /* Align text to the right */
+  text-align: right; /* Align text to the right */
 }
 
 .formentry input {
-  flex-grow: 1; 
+  flex-grow: 1;
 }
 
 #fname,
 #froll,
 #fbranch,
 #fnumber,
-#femail {
-  color: #000000;
+#femail,
+#fhostel,
+#fcg {
+  font-size: 15px;
+  color: #ffffff;
+  background-color: #2b32b2;
+  border: none;
+  border-bottom: 2px solid rgb(255, 255, 255);
 }
 
-#textefft{
-  color:rgb(0, 4, 36) ;
+#fname:focus,
+#froll:focus,
+#fbranch:focus,
+#fnumber:focus,
+#femail:focus,
+#fhostel:focus,
+#fcg:focus {
+  outline: none;
+}
+
+#fname::placeholder,
+#froll::placeholder,
+#fbranch::placeholder,
+#fnumber::placeholder,
+#femail::placeholder,
+#fhostel::placeholder,
+#fcg::placeholder {
+  color: #7a7db5;
+}
+
+#textefft {
+  font-family: Maitree_Medium;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  /* font-weight: bold; */
+}
+
+.content-radio {
+  font-style: Maitree_SemiBold;
+  color: #ffffff;
   font-size: 20px;
-  font-weight: bold;
-}
-
-.content-radio{
   display: flex;
   justify-content: center;
-  font-weight: 30px;
-  font-weight: bold;
+  font-weight: lighter;
 }
 
-.formentryRadio{
-  font-size: 20px;
-  font-weight: bold;
-  color:rgb(0, 4, 36) ;
+.form-radiobtns {
+  margin-bottom: -50px;
+}
+
+.formentryRadio {
+  font-style: Maitree_Medium;
+  font-size: 16px;
+  /* font-weight: bold; */
+  color: rgb(255, 255, 255);
   display: flex;
-  justify-content:center;
-  margin-bottom: 20px;
+  justify-content: center;
+  margin-bottom: 10px;
   gap: 20px;
 }
 
-.content-questions{
-  margin-left: 20px;
+.radio {
+  justify-self: center;
 }
 
-.formentryquestions{
-  margin-bottom: 15px;
+.content-questions {
+  margin-left: 30px;
 }
 
-.form-buttons{
+.formentryquestions {
+  margin-bottom: 30px;
+}
+
+#textques {
+  color: #ffffff;
+  font-family: Maitree-Medium;
+  font-size: 18px;
+}
+
+#q1,
+#q2,
+#q3,
+#q4,
+#q5,
+#q6,
+#q7,
+#q8 {
+  margin-top: 5px;
+  width: 95%;
+  color: #ffffff;
+  background-color: #2b32b2;
+  border: none;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  overflow-wrap: break-word;
+}
+
+#q1:focus,
+#q2:focus,
+#q3:focus,
+#q4:focus,
+#q5:focus,
+#q6:focus,
+#q7:focus,
+#q8:focus {
+  outline: none;
+}
+
+.form-buttons {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
 
+button {
+  border: 2px;
+  border-radius: 6px;
+  font-family: Lora;
+  font-size: 16px;
+  text-align: center;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #2b32b2;
+}
+
+button:hover {
+  font-family: Lora;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: white;
+  color: #2b32b2;
+}
 
 /* LOGO */
 .logo {
@@ -277,6 +405,6 @@ form {
   position: absolute;
   object-fit: contain;
   height: auto;
-  width: 400px;
+  width: 200px;
   z-index: 5;
 }

@@ -14,13 +14,15 @@
     </div>
     <div class="container2 bg">
         <div class="canvas-container">
-            <div class="bg_static"></div>
+            <video autoplay muted loop id="video-background">
+                <source src="./video/Frosh_bg.mp4" type="video/mp4">
+            </video>
         </div>
         <img src="./images/FROSH LOGO 23 AI white-png.png" alt="FROSH LOGO" class="logo">
         <!-- Form -->
         <form>
             <div class="card-inner">
-                    <div class="registration">REGISTRATION FORM</div>
+                    <div class="registration"> REGISTRATION FORM </div>
                     <div class="form-labels">Personel Details</div>
 
                 <div class="content-personeldetails">
@@ -171,48 +173,49 @@
 
                         <h2 class="form-labels">Questions</h2>
                         <div class="content-questions">
+
                             <div class="formentryquestions">
-                                <label for="" id="textefft">Why do you want to join Frosh?</label><br>
-                                <input type="text" name="why" required id="q1" cols="50" rows="8"></input>
+                                <label for="q1" id="textques">Why do you want to join Frosh?</label><br>
+                                <input type="text" name="why" required id="q1" cols="20" rows="8"></input>
                             </div>
 
                             <div class="formentryquestions">
-                                <label for="" id="textefft">What are your soft skills and hard skills?</label><br>
+                                <label for="" id="textques">What are your soft skills and hard skills?</label><br>
                                 <input type="text" name="skills" required id="q2" cols="50" rows="8"></input>
                             </div>
 
                             <div class="formentryquestions">
-                                <label for="" id="textefft">What are some areas of interest you would like to explore during
+                                <label for="" id="textques">What are some areas of interest you would like to explore during
                                     Frosh?</label><br>
                                 <input type="text" name="unique" required id="q3" cols="50" rows="8"></input>
                             </div>
 
                             <div class="formentryquestions">
-                                <label for="" id="textefft">What improvements you would have made in Frosh 2022?</label><br>
+                                <label for="" id="textques">What improvements you would have made in Frosh 2022?</label><br>
                                 <input type="text" name="society" required id="q4" cols="50" rows="8"></input>
                             </div>
 
                             <div class="formentryquestions">
-                                <label for="" id="textefft">If you get selected, what would you like to implement in Frosh
+                                <label for="" id="textques">If you get selected, what would you like to implement in Frosh
                                     2023?</label><br>
                                 <input type="text" name="improve" required id="q5" cols="50" rows="8"></input>
                             </div>
 
                             <div class="formentryquestions">
-                                <label for="" id="textefft">Which societies are you a part of and describe your contribution
+                                <label for="" id="textques">Which societies are you a part of and describe your contribution
                                     to
                                     them?</label><br>
                                 <input type="text" name="new" required id="q6" cols="50" rows="8"></input>
                             </div>
 
                             <div class="formentryquestions">
-                                <label for="" id="textefft">Specify who according to you should be the part of frosh and
+                                <label for="" id="textques">Specify who according to you should be the part of frosh and
                                     why?</label><br>
                                 <input type="text" name="who" required id="q7" cols="50" rows="8"></input>
                             </div>
 
                             <div class="formentryquestions">
-                                <label for="" id="textefft">Specify who according to you should not be the part of frosh and
+                                <label for="" id="textques">Specify who according to you should not be the part of frosh and
                                     why?</label><br>
                                 <input type="text" name="whom" required id="q8" cols="50" rows="8"></input>
                             </div>
