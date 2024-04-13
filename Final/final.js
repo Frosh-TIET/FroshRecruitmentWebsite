@@ -14,3 +14,17 @@ document.addEventListener("DOMContentLoaded", function () {
         container2.scrollIntoView({ behavior: "smooth" });
     });
 });
+
+
+let timer = null;
+
+window.addEventListener('scroll', function() {
+  if(timer !== null) {
+    clearTimeout(timer);        
+    document.querySelector('.bg').classList.remove('wiggle');
+  }
+
+  timer = setTimeout(function() {
+    document.querySelector('.bg').classList.add('wiggle');
+  }, 150);
+}, false);

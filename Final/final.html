@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./final.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <body>
     <div class="container1">
         <div class="canvas-container">
@@ -12,10 +13,13 @@
         <img src="./images/arrow.png" alt="Arrow" class="arrow-image" id="scroll-down-arrow">
         <div class="logo"></div>
     </div>
-    <div class="container2 bg">
+    <div class="container2 bg" data-aos="fade-left" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-center">
         <div class="canvas-container">
         </div> 
-        <img src="./images/FROSH LOGO 23 AI white-png.png" alt="FROSH LOGO" class="logo">
+        <img src="./images/FROSH LOGO 23 AI white-png.png" alt="FROSH LOGO" class="logo" data-aos="fade-right" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-center">
+        <div class="bg1" data-aos="fade-right"></div>
+        <div class="bg2" data-aos="fade-left"></div>
+        
         <!-- Form -->
         <form>
             <div class="card-inner">
@@ -28,7 +32,7 @@
                         <input type="text" id="fname" placeholder="Your Full Name" name="userName" required>
                     </div>
                     <div class="formentry">
-                        <label for="femail" id="textefft">Thapar EmailID</label>
+                        <label for="femail" id="textefft">Thapar Email ID</label>
                         <input type="Email" id="femail" placeholder="@thapar.edu only" name="userEmail" required>
                     </div>
                     <div class="formentry">
@@ -48,14 +52,14 @@
                         <input type="number" id="fcg" placeholder="e.g. 8.36" name="userCg" required>
                     </div>
                     <div class="formentry">
-                        <label for="fhostel" id="textefft">Hostel</label>
-                        <input type="text" id="fhostel" placeholder="Write DS if Day Scholar" name="userHostel" required>
+                        <label for="fhostel" id="textefft">Are you a Day Scholar</label>
+                        <input type="text" id="fhostel" placeholder="Y or N" name="userHostel" required>
                     </div>
                 </div>
 
                     <div class="tab">
                         <h2 class="form-labels">Answer the following questions</h2>
-                        <h3 class="content-radio">Rate yourself on the following criteria {1 being the lowest and 5 being the highest}</h3>
+                        <h3 class="content-radio">Rate yourself on the following criteria <br>{1 being the lowest and 5 being the highest}</h3>
                         <br>
                         <div class="form-radiobtns">
                             <div class="formentryRadio">
@@ -171,48 +175,57 @@
                         <h2 class="form-labels">Questions</h2>
                         <div class="content-questions">
                             <div class="formentryquestions">
-                                <label for="q1" id="textques">Why do you want to join Frosh?</label><br>
+                                <label for="q1" id="textques">Tell us about yourself.</label><br>
                                 <input type="text" name="why" required id="q1" cols="20" rows="8"></input>
                             </div>
 
+                            <div class="formentryquestions">
+                                <label for="" id="textques">Why do you want to join Frosh?
+                                </label><br>
+                                <input type="text" name="skills" required id="q2" cols="50" rows="8"></input>
+                            </div>
                             <div class="formentryquestions">
                                 <label for="" id="textques">What are your soft skills and hard skills?</label><br>
                                 <input type="text" name="skills" required id="q2" cols="50" rows="8"></input>
                             </div>
 
                             <div class="formentryquestions">
-                                <label for="" id="textques">What are some areas of interest you would like to explore during
-                                    Frosh?</label><br>
+                                <label for="" id="textques">What are you hoping to discover about yourself during your time in Frosh?</label><br>
                                 <input type="text" name="unique" required id="q3" cols="50" rows="8"></input>
                             </div>
 
                             <div class="formentryquestions">
-                                <label for="" id="textques">What improvements you would have made in Frosh 2022?</label><br>
+                                <label for="" id="textques">What are some ideas you would like to implement this year to enhance the experience of freshers with Frosh?</label><br>
                                 <input type="text" name="society" required id="q4" cols="50" rows="8"></input>
                             </div>
 
                             <div class="formentryquestions">
-                                <label for="" id="textques">If you get selected, what would you like to implement in Frosh
-                                    2023?</label><br>
+                                <label for="" id="textques">If you were part of Frosh 2023, what improvements would you have made? </label><br>
                                 <input type="text" name="improve" required id="q5" cols="50" rows="8"></input>
                             </div>
 
                             <div class="formentryquestions">
-                                <label for="" id="textques">Which societies are you a part of and describe your contribution
-                                    to
-                                    them?</label><br>
+                                <label for="" id="textques">Are you part of any other societies? If yes, then describe your contribution in them. </label><br>
                                 <input type="text" name="new" required id="q6" cols="50" rows="8"></input>
                             </div>
 
                             <div class="formentryquestions">
-                                <label for="" id="textques">Specify who according to you should be the part of frosh and
-                                    why?</label><br>
+                                <label for="" id="textques">What qualities of yours make you distinct from others? 
+                                </label><br>
                                 <input type="text" name="who" required id="q7" cols="50" rows="8"></input>
                             </div>
 
                             <div class="formentryquestions">
-                                <label for="" id="textques">Specify who according to you should not be the part of frosh and
-                                    why?</label><br>
+                                <label for="" id="textques">
+                                    Who should be a part of Frosh 2024 according to you and why? 
+                                    </label><br>
+                                <input type="text" name="whom" required id="q8" cols="50" rows="8"></input>
+                            </div>
+
+                            <div class="formentryquestions">
+                                <label for="" id="textques">
+                                    Who should not be a part of Frosh 2024 according to you and why? 
+                                    </label><br>
                                 <input type="text" name="whom" required id="q8" cols="50" rows="8"></input>
                             </div>
                         </div>
@@ -220,12 +233,12 @@
 
                     <div class="tab">
                         <div class="formbody">
-                            <h2 class="form-labels">Do you want to make a talent entry?</h2>
+                            <h2 class="form-labels2">Do you wish to make a Talent Entry? <br>(Your talents may include anything you are skilled in like singing, dancing, graphic design, cinematography, Web/App Dev etc.)</h2>
                             <div class="form-buttons">
                                 <button id="show-button-1" onclick=" toggleContent(1)" class="startlink">YES</button>
                                 <button id="show-button-2" onclick=" toggleContent(2)" class="startlink">NO</button>
                             </div>
-                            <h1 class="form-labels">For the Final Submission</h1>
+                            <h1 class="form-labels">Final Submission</h1>
                             <div class="submitBtn">
                                 <!-- <input type="button" id="submit_button" name="Submit" value="SUBMIT" onclick="myFunction()">
                                 <p id="demo"></p> -->                            
@@ -247,7 +260,7 @@
     <script>
         function myFunction() {
           var txt;
-          if (confirm("Are you sure you wan to submit ?")) {
+          if (confirm("Are you sure you want to submit?")) {
             txt = "Your form has been succesfully submited :)";
           } else {
             txt = "You form has not been submited :/";
@@ -264,5 +277,9 @@
         }
     </script>
     <script type="module" src="./final.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>

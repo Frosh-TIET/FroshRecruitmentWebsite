@@ -22,6 +22,14 @@
   font-family: "Mango Grotesque-VF";
   src: url("../Final/fonts/Mango\ Grotesque-VF.ttf");
 }
+@font-face {
+  font-family: "Helvetica-Bold";
+  src: url("../Final/fonts/Helvetica-Bold.ttf");
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("../Final/fonts/Helvetica.ttf");
+}
 
 .card-inner::-webkit-scrollbar {
   width: 10px;
@@ -73,12 +81,34 @@ body {
   flex-direction: row-reverse;
   justify-content: center;
   /* background-repeat: url("../Final/images/0001-0096.mkv"); */
-  /* background-image: ur  */
+  background-image: url("./images/anushka.png"); 
   background-size: cover;
   align-items: center;
   /* overflow: auto;  */
   z-index: 1;
 }
+
+
+
+/* .bg1,.bg2{
+  flex:1;
+  height:100%;
+
+} */
+/* .bg1{
+  background-image: url("./images/half1.png");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+.bg2{
+  background-image: url("./images/half2.png");
+  background-position: right;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+} */
 
 .canvas-container {
   width: 100%;
@@ -122,14 +152,14 @@ form {
   background-color:#2b32b2;
   position: absolute;
   /* border: 5px solid #ffff; */
-  border-radius: 50px;
-  backdrop-filter: blur(65px);
-  box-shadow: 0 0 40px rgba(30, 30, 30, 0.6);
+  border-radius: 50px; 
+  backdrop-filter: blur(80px); 
+  box-shadow: 0 0 40px rgba(30, 30, 30, 0.6); 
   padding: 50px 35px;
 }
 
 form input {
-  font-family: "Tonnelier-Medium";
+  font-family: "Helvetica";
 }
 .card-inner {
   overflow-y: auto;
@@ -223,20 +253,34 @@ form input {
     ),
     linear-gradient(135deg, rgb(23, 233, 173), rgb(29, 24, 208));
 } */
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(3deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-3deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* .bg.wiggle {
+  animation: wiggle 5s ease-in-out infinite;
+} */
 
 .bg {
-  background-image: url('./images/Frosh_gif_bg.gif');
+  /* background-image: url('./images/anushka.png'); */
   background-position: center;
-  background-size:cover;
+  background-size: cover;
+  background-attachment: fixed;
   overflow: hidden;
+  transition: background-image 0.2s ease;
+ /* animation: wiggle 5s ease-in-out infinite; Add this line */
 }
 
 /* FORM inside */
 .registration {
   color: #f7f6f2;
   /* font-weight: bold; */
-  font-family: "Xillian Regular";
-  font-weight: 60;
+  font-family: "Helvetica-Bold";
+  font-weight: bold;
   font-size: 35px;
   justify-self: center;
   /* text-decoration: underline; */
@@ -246,19 +290,37 @@ form input {
 }
 
 .form-labels {
-  margin-top: 50px;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   color: rgb(255, 255, 255);
-  font-size: 28px;
+  font-size: 25px;
   display: flex;
   justify-content: center;
-  font-family: "Milligram-Bold-trial";
+  font-family: "Helvetica-Bold";
+}
+.form-labels2 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: "Helvetica-Bold";
 }
 
 .content-personeldetails {
   margin-right: 15vw;
   margin-left: 10vw;
   gap: 20px;
+}
+#no {
+  font-family: "Helvetica";
+  font-size:15px;
+  color:#f7f6f2;
+  text-align: left;
+  /* justify-content: left; */
+
 }
 
 .formentry {
@@ -273,7 +335,7 @@ form input {
   flex-basis: 25%; /* Adjust width as needed */
   margin-right: 10px; /* Adjust margin as needed */
   text-align: right; /* Align text to the right */
-  font-family: "Milligram-Bold-trial";
+  font-family: "Helvetica";
 }
 
 .formentry input {
@@ -288,7 +350,7 @@ form input {
 #fhostel,
 #fcg {
   font-size: 15px;
-  color: #ffffff;
+  color: #f7f6f2;
   background-color: #2b32b2;
   border: none;
   border-bottom: 2px solid rgb(255, 255, 255);
@@ -313,20 +375,21 @@ form input {
 }
 
 #textefft {
-  font-family: "Milligram-Bold-trial";
+  font-family: "Helvetica";
   color: #f7f6f2;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 15px;
+  /* font-weight: bold; */
   display: flex;
   justify-content: flex-end;
 }
 
 .content-radio {
-  font-family: "Milligram-Bold-trial";
+  font-family: "Helvetica";
   color: #f7f6f2;
   font-size: 20px;
   display: flex;
   justify-content: center;
+  text-align: center;
   font-weight: lighter;
 }
 
@@ -335,7 +398,7 @@ form input {
 }
 
 .formentryRadio {
-  font-family: "Milligram-Bold-trial";
+  font-family: "Helvetica";
   font-size: 16px;
   /* font-weight: bold; */
   color: #f7f6f2;
@@ -350,14 +413,19 @@ form input {
 
 .content-questions {
   margin-left: 30px;
+  font-family: "Helvetica";
+
 }
 
 .formentryquestions {
   margin-bottom: 30px;
+  font-family: "Helvetica";
 }
 
 #textques{
-  color: white;
+  color: #f7f6f2;
+  font-family: "Helvetica";
+  font-size:15px;
 }
 
 #q1,
@@ -369,7 +437,7 @@ form input {
 #q7,
 #q8 {
   margin-top: 5px;
-  font-family: "Milligram-Bold-trial";
+  font-family: "Helvetica";
   width: 95%;
   color: #f7f6f2;
   background-color: #2b32b2;
@@ -417,6 +485,7 @@ form input {
 }
 
 .submitBtn{
+  font-family: "Helvetica";
   /* margin-top: 5px; */
   display: flex;
   justify-content: center;
@@ -426,6 +495,7 @@ form input {
   display: inline-block;
   outline: 0;
   border: 100px;
+  font-family: "Helvetica";
   cursor: pointer;
   will-change: box-shadow,transform;
   background-color: #2b32b2;
@@ -441,12 +511,16 @@ form input {
 
 .submit-button:hover {
   box-shadow: inset 0px 3px 7px #3c4fe0;
+  color:#2b32b2;
+  background-color: #f7f6f2;
   transform: translateY(2px);
+  font-family: "Helvetica";
 }
 
 .submit-button:active{
       box-shadow: 0px 4px 8px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgba(0, 0, 0, 0.3), inset 0px -3px 0px #3c4fe0;
       transform: translateY(-2px);
+      font-family: "Helvetica";
 }
 
 /* LOGO */
@@ -458,6 +532,7 @@ form input {
   position: absolute;
   object-fit: contain;
   height: 100px;
-  width: 200px;
+  width:160px;
   z-index: 8;
+  transition: all 0.5s ease;
 }
