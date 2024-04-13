@@ -1,13 +1,26 @@
-::-webkit-scrollbar {
-  width: 10px; /* Width of the scrollbar */
+@font-face { font-family: "Milligram-Bold-trial"; src: url("../Final/fonts/Milligram-Bold-trial.ttf"); }
+@font-face { font-family: "Xillian Regular"; src: url("../Final/fonts/Xillian\ Regular.otf"); }
+@font-face { font-family: "LTSuperior-Semibold"; src: url("../Final/fonts/LTSuperior-Semibold.otf"); }
+@font-face { font-family: "LTSuperior-Medium"; src: url("../Final/fonts/LTSuperior-Medium.otf"); }
+@font-face { font-family: "Tonnelier-Medium"; src: url("../Final/fonts/Tonnelier-Medium.ttf"); }
+@font-face { font-family: "Mango Grotesque-VF"; src: url("../Final/fonts/Mango\ Grotesque-VF.ttf"); }
+
+
+
+
+
+.card-inner::-webkit-scrollbar {
+  width: 10px;          
 }
 
-::-webkit-scrollbar-track {
-  background: #7a7db5; /* Track color */
-}
+.card-inner::-webkit-scrollbar-thumb {   
+ border-radius: 30px;
+ background: -webkit-gradient(linear, left top, left bottom, from(#F4DC79), color-stop(10%, #F4DC79),color-stop(40%, #FEF4AC), to(#C3AB6A));
+ box-shadow: inset 2px 2px 2px rgba(255,255,255,.25), inset -2px -2px 2px rgba(0,0,0,.25);}
 
-::-webkit-scrollbar-thumb {
-  background: #ffffff; /* Thumb color */
+ .card-inner::-webkit-scrollbar-track {     
+ background-color: #292D99;
+ /* background: linear-gradient(to right,#201c29,#201c29 1px,#100e17 1px,#100e17); */
 }
 body {
   height: 100%;
@@ -47,16 +60,6 @@ body {
   z-index: 0;
 }
 
-#video-background {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-
 canvas {
   display: block;
   width: 100%;
@@ -87,17 +90,15 @@ canvas {
 
 /* Form */
 form {
-  margin-top: -5px;
-  height: 45vh;
+  margin-top: 100px;;
+  height: 50vh;
   width: 60vw;
-  align-content: center;
-  align-self: center;
-  background-color: #2b32b2;
+  background-color: rgba(0, 0, 0, 0.13);
   position: absolute;
-  border: 5px solid #ffff;
-  border-radius: 10px;
+  /* border: 5px solid #ffff; */
+  border-radius: 50px;
   backdrop-filter: blur(65px);
-  box-shadow: 0 0 40px rgba(30, 30, 30, 0.6);
+  /* box-shadow: 0 0 40px rgba(30, 30, 30, 0.6); */
   padding: 50px 35px;
 }
 
@@ -118,8 +119,7 @@ form input {
   right: 0;
   bottom: 0;
   left: 0;
-}
-/* background-image: radial-gradient(
+  background-image: radial-gradient(
       circle at 30% 86%,
       rgba(255, 255, 255, 0.03) 0%,
       rgba(255, 255, 255, 0.03) 8%,
@@ -197,36 +197,49 @@ form input {
       transparent 96%
     ),
     linear-gradient(135deg, rgb(23, 233, 173), rgb(29, 24, 208));
+} */
+.bg {
+  /* z-index: -1; */
+  /* height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; */
+  background-clip: url("../Final/images/0001-0096.mkv");
+  /* background-position: fixed; */
+  background-size: cover;
 }
 
 /* FORM inside */
 .registration{
-  color: rgb(0, 4, 36);
-  font-weight: bold;
+  color: #F7F6F2;
+  /* font-weight: bold; */
+  font-family: "Xillian Regular";
+  font-weight: 60;
   font-size: 35px;
+  justify-self: center;
+  /* text-decoration: underline; */
+  text-align: center;
   display: flex;
   justify-content: center;
-  justify-self: center;
-  text-decoration: underline;
-  text-align: center;
 }
 
 .form-labels {
-  font-family: Domine;
-  font-weight: lighter;
   margin-top: 50px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   color: rgb(255, 255, 255);
-  font-size: 25px;
+  font-size: 28px;
   display: flex;
   justify-content: center;
-  font-weight:bold;
+  font-family: "Milligram-Bold-trial";
 }
 
-.content-personeldetails {
+.content-personeldetails{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-right: 60px;
+  /* gap: 10px; */
 }
 
 .formentry {
@@ -241,10 +254,11 @@ form input {
   flex-basis: 25%; /* Adjust width as needed */
   margin-right: 10px; /* Adjust margin as needed */
   text-align:right; /* Align text to the right */
+  font-family: "Milligram-Bold-trial";
 }
 
 .formentry input {
-  flex-grow: 1;
+  flex-grow: 1; 
 }
 
 #fname,
@@ -256,11 +270,10 @@ form input {
 #fcg {
   font-size: 15px;
   color: #ffffff;
-  background-color: #2b32b2;
+  background-color: #292D99;
   border: none;
   border-bottom: 2px solid rgb(255, 255, 255);
 }
-
 #fname:focus,
 #froll:focus,
 #fbranch:focus,
@@ -270,7 +283,6 @@ form input {
 #fcg:focus {
   outline: none;
 }
-
 #fname::placeholder,
 #froll::placeholder,
 #fbranch::placeholder,
@@ -280,17 +292,15 @@ form input {
 #fcg::placeholder {
   color: #7a7db5;
 }
-
-#textefft {
-  font-family: Maitree_Medium;
-  color: rgb(255, 255, 255);
+#textefft{
+  font-family: "Milligram-Bold-trial";
+  color:#F7F6F2;
   font-size: 16px;
-  /* font-weight: bold; */
+  font-weight: bold;
 }
-
 .content-radio {
-  font-style: Maitree_SemiBold;
-  color: #ffffff;
+  font-family: "Milligram-Bold-trial";
+  color: #F7F6F2;
   font-size: 20px;
   display: flex;
   justify-content: center;
@@ -302,32 +312,25 @@ form input {
 }
 
 .formentryRadio {
-  font-style: Maitree_Medium;
+  font-family: "Milligram-Bold-trial";
   font-size: 16px;
   /* font-weight: bold; */
-  color: rgb(255, 255, 255);
+  color: #F7F6F2;
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
   gap: 20px;
 }
-
 .radio {
   justify-self: center;
 }
 
-.content-questions {
+.content-questions{
   margin-left: 30px;
 }
 
 .formentryquestions {
   margin-bottom: 30px;
-}
-
-#textques {
-  color: #ffffff;
-  font-family: Maitree-Medium;
-  font-size: 18px;
 }
 
 #q1,
@@ -339,8 +342,9 @@ form input {
 #q7,
 #q8 {
   margin-top: 5px;
+  font-family: "Milligram-Bold-trial";
   width: 95%;
-  color: #ffffff;
+  color:#F7F6F2;
   background-color: #2b32b2;
   border: none;
   border-bottom: 2px solid rgb(255, 255, 255);
@@ -358,12 +362,11 @@ form input {
   outline: none;
 }
 
-.form-buttons {
+.form-buttons{
   display: flex;
   justify-content: center;
   gap: 10px;
 }
-
 button {
   border: 2px;
   border-radius: 6px;
@@ -392,7 +395,7 @@ button:hover {
   padding-top:40px;
   position: absolute;
   object-fit: contain;
-  height: auto;
-  width: 400px;
-  z-index: 5;
+  height: 100px;
+  width: 200px;
+  z-index: 8;
 }
