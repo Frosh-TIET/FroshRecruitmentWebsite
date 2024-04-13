@@ -1,23 +1,50 @@
-@font-face { font-family: "Milligram-Bold-trial"; src: url("../Final/fonts/Milligram-Bold-trial.ttf"); }
-@font-face { font-family: "Xillian Regular"; src: url("../Final/fonts/Xillian\ Regular.otf"); }
-@font-face { font-family: "LTSuperior-Semibold"; src: url("../Final/fonts/LTSuperior-Semibold.otf"); }
-@font-face { font-family: "LTSuperior-Medium"; src: url("../Final/fonts/LTSuperior-Medium.otf"); }
-@font-face { font-family: "Tonnelier-Medium"; src: url("../Final/fonts/Tonnelier-Medium.ttf"); }
-@font-face { font-family: "Mango Grotesque-VF"; src: url("../Final/fonts/Mango\ Grotesque-VF.ttf"); }
-
-
-.card-inner::-webkit-scrollbar {
-  width: 10px;          
+@font-face {
+  font-family: "Milligram-Bold-trial";
+  src: url("../Final/fonts/Milligram-Bold-trial.ttf");
+}
+@font-face {
+  font-family: "Xillian Regular";
+  src: url("../Final/fonts/Xillian\ Regular.otf");
+}
+@font-face {
+  font-family: "LTSuperior-Semibold";
+  src: url("../Final/fonts/LTSuperior-Semibold.otf");
+}
+@font-face {
+  font-family: "LTSuperior-Medium";
+  src: url("../Final/fonts/LTSuperior-Medium.otf");
+}
+@font-face {
+  font-family: "Tonnelier-Medium";
+  src: url("../Final/fonts/Tonnelier-Medium.ttf");
+}
+@font-face {
+  font-family: "Mango Grotesque-VF";
+  src: url("../Final/fonts/Mango\ Grotesque-VF.ttf");
 }
 
-.card-inner::-webkit-scrollbar-thumb {   
- border-radius: 30px;
- background: -webkit-gradient(linear, left top, left bottom, from(#F4DC79), color-stop(10%, #F4DC79),color-stop(40%, #FEF4AC), to(#C3AB6A));
- box-shadow: inset 2px 2px 2px rgba(255,255,255,.25), inset -2px -2px 2px rgba(0,0,0,.25);}
+.card-inner::-webkit-scrollbar {
+  width: 10px;
+}
 
- .card-inner::-webkit-scrollbar-track {     
- background-color: #292D99;
- /* background: linear-gradient(to right,#201c29,#201c29 1px,#100e17 1px,#100e17); */
+.card-inner::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#f4dc79),
+    color-stop(10%, #f4dc79),
+    color-stop(40%, #fef4ac),
+    to(#c3ab6a)
+  );
+  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25),
+    inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.card-inner::-webkit-scrollbar-track {
+  background-color: #292d99;
+  /* background: linear-gradient(to right,#201c29,#201c29 1px,#100e17 1px,#100e17); */
 }
 
 body {
@@ -32,7 +59,7 @@ body {
 
 .container1 {
   position: relative;
-  height: 100vh; 
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,7 +82,7 @@ body {
 
 .canvas-container {
   width: 100%;
-  height: 100vh; 
+  height: 100vh;
   z-index: 0;
 }
 
@@ -89,18 +116,17 @@ canvas {
 
 /* Form */
 form {
-  margin-top: 100px;;
+  margin-top: 100px;
   height: 50vh;
   width: 60vw;
-  background-color: rgba(0, 0, 0, 0.13);
+  background-color:#2b32b2;
   position: absolute;
   /* border: 5px solid #ffff; */
   border-radius: 50px;
   backdrop-filter: blur(65px);
-  /* box-shadow: 0 0 40px rgba(30, 30, 30, 0.6); */
+  box-shadow: 0 0 40px rgba(30, 30, 30, 0.6);
   padding: 50px 35px;
 }
-
 
 form input {
   font-family: "Tonnelier-Medium";
@@ -199,20 +225,15 @@ form input {
 } */
 
 .bg {
-  /* z-index: -1; */
-  /* height: 100%;
-  width: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0; */
-  /* background-position: fixed; */
-  background-size: cover;
+  background-image: url('./images/Frosh_gif_bg.gif');
+  background-position: center;
+  background-size:cover;
+  overflow: hidden;
 }
 
 /* FORM inside */
-.registration{
-  color: #F7F6F2;
+.registration {
+  color: #f7f6f2;
   /* font-weight: bold; */
   font-family: "Xillian Regular";
   font-weight: 60;
@@ -234,9 +255,9 @@ form input {
   font-family: "Milligram-Bold-trial";
 }
 
-.content-personeldetails{
-  margin-right: 250px;
-  margin-left:180px;
+.content-personeldetails {
+  margin-right: 15vw;
+  margin-left: 10vw;
   gap: 20px;
 }
 
@@ -251,12 +272,12 @@ form input {
 .formentry label {
   flex-basis: 25%; /* Adjust width as needed */
   margin-right: 10px; /* Adjust margin as needed */
-  text-align:right; /* Align text to the right */
+  text-align: right; /* Align text to the right */
   font-family: "Milligram-Bold-trial";
 }
 
 .formentry input {
-  flex-grow: 1; 
+  flex-grow: 1;
 }
 
 #fname,
@@ -268,7 +289,7 @@ form input {
 #fcg {
   font-size: 15px;
   color: #ffffff;
-  background-color: #292D99;
+  background-color: #2b32b2;
   border: none;
   border-bottom: 2px solid rgb(255, 255, 255);
 }
@@ -291,9 +312,9 @@ form input {
   color: #7a7db5;
 }
 
-#textefft{
+#textefft {
   font-family: "Milligram-Bold-trial";
-  color:#F7F6F2;
+  color: #f7f6f2;
   font-size: 16px;
   font-weight: bold;
   display: flex;
@@ -302,7 +323,7 @@ form input {
 
 .content-radio {
   font-family: "Milligram-Bold-trial";
-  color: #F7F6F2;
+  color: #f7f6f2;
   font-size: 20px;
   display: flex;
   justify-content: center;
@@ -317,7 +338,7 @@ form input {
   font-family: "Milligram-Bold-trial";
   font-size: 16px;
   /* font-weight: bold; */
-  color: #F7F6F2;
+  color: #f7f6f2;
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
@@ -327,12 +348,16 @@ form input {
   justify-self: center;
 }
 
-.content-questions{
+.content-questions {
   margin-left: 30px;
 }
 
 .formentryquestions {
   margin-bottom: 30px;
+}
+
+#textques{
+  color: white;
 }
 
 #q1,
@@ -346,7 +371,7 @@ form input {
   margin-top: 5px;
   font-family: "Milligram-Bold-trial";
   width: 95%;
-  color:#F7F6F2;
+  color: #f7f6f2;
   background-color: #2b32b2;
   border: none;
   border-bottom: 2px solid rgb(255, 255, 255);
@@ -364,12 +389,14 @@ form input {
   outline: none;
 }
 
-.form-buttons{
+.form-buttons {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
-button {
+
+/* Buttons */
+#show-button-1,#show-button-2{
   border: 2px;
   border-radius: 6px;
   font-family: Lora;
@@ -381,7 +408,7 @@ button {
   background-color: #2b32b2;
 }
 
-button:hover {
+#show-button-1:hover,#show-button-2:hover {
   font-family: Lora;
   font-size: 16px;
   font-weight: bold;
@@ -389,12 +416,45 @@ button:hover {
   color: #2b32b2;
 }
 
+.submitBtn{
+  /* margin-top: 5px; */
+  display: flex;
+  justify-content: center;
+}
+
+.submit-button{  
+  display: inline-block;
+  outline: 0;
+  border: 100px;
+  cursor: pointer;
+  will-change: box-shadow,transform;
+  background-color: #2b32b2;
+  box-shadow: 0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px rgb(58 65 111 / 50%);
+  padding: 0 32px;
+  border-radius: 6px;
+  color: #fff;
+  height: 48px;
+  font-size: 18px;
+  text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+  transition: box-shadow 0.15s ease,transform 0.15s ease;
+}
+
+.submit-button:hover {
+  box-shadow: inset 0px 3px 7px #3c4fe0;
+  transform: translateY(2px);
+}
+
+.submit-button:active{
+      box-shadow: 0px 4px 8px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgba(0, 0, 0, 0.3), inset 0px -3px 0px #3c4fe0;
+      transform: translateY(-2px);
+}
+
 /* LOGO */
 .logo {
   /* align-items: center; */
   justify-content: center;
   margin-bottom: 70vh;
-  padding-top:40px;
+  padding-top: 40px;
   position: absolute;
   object-fit: contain;
   height: 100px;
