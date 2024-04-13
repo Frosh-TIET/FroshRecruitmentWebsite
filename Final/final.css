@@ -6,9 +6,6 @@
 @font-face { font-family: "Mango Grotesque-VF"; src: url("../Final/fonts/Mango\ Grotesque-VF.ttf"); }
 
 
-
-
-
 .card-inner::-webkit-scrollbar {
   width: 10px;          
 }
@@ -22,10 +19,12 @@
  background-color: #292D99;
  /* background: linear-gradient(to right,#201c29,#201c29 1px,#100e17 1px,#100e17); */
 }
+
 body {
   height: 100%;
+  width: 100vw;
   margin: 0;
-  background-image: url("../Final/images/Untitled-2(1).png");
+  background-color: #2b32b2;
   padding: 0px;
   margin: 0px;
   overflow: auto;
@@ -33,7 +32,7 @@ body {
 
 .container1 {
   position: relative;
-  height: 100vh; /* Minimum height for each container */
+  height: 100vh; 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,7 +46,7 @@ body {
   flex-direction: row-reverse;
   justify-content: center;
   /* background-repeat: url("../Final/images/0001-0096.mkv"); */
-  background-image: url("../Final/images/Untitled-2(1).png");
+  /* background-image: ur  */
   background-size: cover;
   align-items: center;
   /* overflow: auto;  */
@@ -56,7 +55,7 @@ body {
 
 .canvas-container {
   width: 100%;
-  height: 100vh; /* Each canvas takes up full viewport height */
+  height: 100vh; 
   z-index: 0;
 }
 
@@ -198,6 +197,7 @@ form input {
     ),
     linear-gradient(135deg, rgb(23, 233, 173), rgb(29, 24, 208));
 } */
+
 .bg {
   /* z-index: -1; */
   /* height: 100%;
@@ -206,7 +206,6 @@ form input {
   right: 0;
   bottom: 0;
   left: 0; */
-  background-clip: url("../Final/images/0001-0096.mkv");
   /* background-position: fixed; */
   background-size: cover;
 }
@@ -236,10 +235,9 @@ form input {
 }
 
 .content-personeldetails{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin-right: 60px;
-  /* gap: 10px; */
+  margin-right: 250px;
+  margin-left:180px;
+  gap: 20px;
 }
 
 .formentry {
@@ -247,7 +245,7 @@ form input {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .formentry label {
@@ -292,12 +290,16 @@ form input {
 #fcg::placeholder {
   color: #7a7db5;
 }
+
 #textefft{
   font-family: "Milligram-Bold-trial";
   color:#F7F6F2;
   font-size: 16px;
   font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
 }
+
 .content-radio {
   font-family: "Milligram-Bold-trial";
   color: #F7F6F2;
