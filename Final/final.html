@@ -25,7 +25,6 @@
             <div class="card-inner">
                     <div class="registration">RECRUITMENT FORM</div>
                     <div class="form-labels">Personal Details</div>
-
                 <div class="content-personeldetails">
                     <div class="formentry">
                         <label for="fname" id="textefft">Full Name</label>
@@ -235,38 +234,43 @@
                         <div class="formbody">
                             <h2 class="form-labels2">Do you wish to make a Talent Entry? <br>(Your talents may include anything you are skilled in like singing, dancing, graphic design, cinematography, Web/App Dev etc.)</h2>
                             <div class="form-buttons">
-                                <button id="show-button-1" onclick=" toggleContent(1)" class="startlink">YES</button>
-                                <button id="show-button-2" onclick=" toggleContent(2)" class="startlink">NO</button>
+                                <button id="show-button-1" onclick="talentYes()" class="startlink">YES</button>
+                                <button id="show-button-2" onclick="talentNo()" class="startlink">NO</button>
                             </div>
+                            <div id="talent-text"></div>
+                            <input type="text" id="talent-link" style="display: none;" placeholder="Paste link here">
                             <h1 class="form-labels">Final Submission</h1>
-                            <div class="submitBtn">
-                                <!-- <input type="button" id="submit_button" name="Submit" value="SUBMIT" onclick="myFunction()">
-                                <p id="demo"></p> -->                            
-                                <button type="submit    "class="submit-button" onclick="myFunction()">Submit</button>
-                                <!-- <br><div id="demo"></div>  -->
+                            <div class="submitBtn">      
+                                <button type="submit    "class="submit-button" onclick="submitFunction()">Submit</button>
                             </div>
-                            <!-- <div class="form-buttons" id="talent" style="display:none;">
-                                <label for="" id="textefft">Paste Google Drive link here</label>
-                                <input type="text" name="" id="talentSubmission"></input>
-                                <br>
-                                <button type="submit" class="startlink" id="talentbutton">SUBMIT</button>
-                            </div> -->
+                                <div id="demo"></div>   
                         </div>
                     </div>
                 </div>
             </form>
     </div>
-
     <script>
-        function myFunction() {
+
+        function submitFunction() {
           var txt;
           if (confirm("Are you sure you want to submit?")) {
-            txt = "Your form has been succesfully submited :)";
+            txt = "Your response has been succesfully submited :)";
           } else {
-            txt = "You form has not been submited :/";
+            txt = "You response has not been submited :/";
           }
           document.getElementById("demo").innerHTML = txt;
         }
+
+        function talentYes() {
+        document.getElementById("talent-text").innerHTML = "Please paste the link to showcase your talent:";
+        document.getElementById("talent-link").style.display = "flex";x
+        }
+
+        function talentNo() {
+        document.getElementById("talent-text").innerHTML = "That's okay. You can always showcase your talent later!";
+        document.getElementById("talent-link").style.display = "none";
+        }
+
     </script>
     <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
     <script type="importmap">

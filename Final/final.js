@@ -3,7 +3,7 @@ import { Application } from '@splinetool/runtime';
 
 const canvas = document.getElementById('canvas3d');
 const app = new Application(canvas);
-app.load('https://prod.spline.design/tXZiNSprUgG4nqhY/scene.splinecode');
+app.load('https://prod.spline.design/VufIgZe7y0IUh0fl/scene.splinecode');
 
 //arrow animatioin
 document.addEventListener("DOMContentLoaded", function () {
