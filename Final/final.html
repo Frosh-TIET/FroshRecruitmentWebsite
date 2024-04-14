@@ -17,11 +17,11 @@
         <div class="canvas-container">
         </div> 
         <img src="./images/FROSH LOGO 23 AI white-png.png" alt="FROSH LOGO" class="logo" data-aos="fade-right" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-center">
-        <div class="bg1" data-aos="fade-right"></div>
-        <div class="bg2" data-aos="fade-left"></div>
+        <!-- <div class="bg1" data-aos="fade-right"></div>
+        <div class="bg2" data-aos="fade-left"></div> -->
         
         <!-- Form -->
-        <form>
+        <form action="" id="recruitmentForm" method="POST">
             <div class="card-inner">
                     <div class="registration">RECRUITMENT FORM</div>
                     <div class="form-labels">Personal Details</div>
@@ -242,7 +242,7 @@
                             <div class="submitBtn">
                                 <!-- <input type="button" id="submit_button" name="Submit" value="SUBMIT" onclick="myFunction()">
                                 <p id="demo"></p> -->                            
-                                <button class="submit-button" onclick="myFunction()">Submit</button>
+                                <button type="submit    "class="submit-button" onclick="myFunction()">Submit</button>
                                 <!-- <br><div id="demo"></div>  -->
                             </div>
                             <!-- <div class="form-buttons" id="talent" style="display:none;">
@@ -277,6 +277,8 @@
         }
     </script>
     <script type="module" src="./final.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
