@@ -1,4 +1,3 @@
-//spline design
 import { Application } from '@splinetool/runtime';
 
 const canvas = document.getElementById('canvas3d');

@@ -1,0 +1,599 @@
+@font-face {
+    font-family: "Milligram-Bold-trial";
+    src: url("../Final/fonts/Milligram-Bold-trial.ttf");
+  }
+  @font-face {
+    font-family: "Xillian Regular";
+    src: url("../Final/fonts/Xillian\ Regular.otf");
+  }
+  @font-face {
+    font-family: "LTSuperior-Semibold";
+    src: url("../Final/fonts/LTSuperior-Semibold.otf");
+  }
+  @font-face {
+    font-family: "LTSuperior-Medium";
+    src: url("../Final/fonts/LTSuperior-Medium.otf");
+  }
+  @font-face {
+    font-family: "Tonnelier-Medium";
+    src: url("../Final/fonts/Tonnelier-Medium.ttf");
+  }
+  @font-face {
+    font-family: "Mango Grotesque-VF";
+    src: url("../Final/fonts/Mango\ Grotesque-VF.ttf");
+  }
+  @font-face {
+    font-family: "Helvetica-Bold";
+    src: url("../Final/fonts/Helvetica-Bold.ttf");
+  }
+  @font-face {
+    font-family: "Helvetica";
+    src: url("../Final/fonts/Helvetica.ttf");
+  }
+  @font-face {
+    font-family: "Poppins-Bold";
+    src: url("../Final/fonts/Poppins-Bold.ttf");
+  }
+  @font-face {
+    font-family: "Poppins-Regular";
+    src: url("../Final/fonts/Poppins-Regular.ttf");
+  }
+  @font-face {
+    font-family: "Poppins-SemiBold";
+    src: url("../Final/fonts/Poppins-SemiBold.ttf");
+  }
+  
+  
+  html{
+    scrollbar-width: none;
+  }
+  .card-inner::-webkit-scrollbar {
+    width: 10px;
+    display: none;
+  }
+  
+  .card-inner::-webkit-scrollbar-thumb {
+    border-radius: 30px;
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(#f4dc79),
+      color-stop(10%, #f4dc79),
+      color-stop(40%, #fef4ac),
+      to(#c3ab6a)
+    );
+    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25),
+      inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+  }
+  
+  .card-inner::-webkit-scrollbar-track {
+    background-color: #292d99;
+    /* background: linear-gradient(to right,#201c29,#201c29 1px,#100e17 1px,#100e17); */
+  }
+  
+  body {
+    height: 100%;
+    width: 100vw;
+    margin: 0;
+    background-color: #2b32b2;
+    padding: 0px;
+    margin: 0px;
+    overflow: auto;
+  }
+  body::-webkit-scrollbar{
+    display:none;
+  }
+  
+  .container1 {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container2 {
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    /* background-repeat: url("../Final/images/0001-0096.mkv"); */
+    background-image: url("./images/werf.png"); 
+    background-size: cover;
+    align-items: center;
+    /* overflow: auto;  */
+    z-index: 1;
+  }
+  
+  
+  
+  /* .bg1,.bg2{
+    flex:1;
+    height:100%;
+  
+  } */
+  /* .bg1{
+    background-image: url("./images/half1.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+  }
+  .bg2{
+    background-image: url("./images/half2.png");
+    background-position: right;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+  } */
+  
+  .canvas-container {
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+  }
+  
+  canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* Additional styling for canvas if needed */
+  }
+  
+  /* ARROW */
+  .arrow-image {
+    position: absolute;
+    bottom: 15px;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    animation: bounceUpDown 2s ease-in-out infinite;
+  }
+  
+  @keyframes bounceUpDown {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Form */
+  form {
+    margin-top: 100px;
+    height: 50vh;
+    width: 60vw;
+    background: linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0));
+  
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 50px; 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+    
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 50px 35px;
+    /* margin-left: 54vh; */
+  }
+  
+  form input {
+    font-family: "Poppins-Regular";
+  }
+  .card-inner {
+    overflow-y: auto;
+    max-height: calc(140% - 20vh);
+  }
+  
+  /* .bg {
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: radial-gradient(
+        circle at 30% 86%,
+        rgba(255, 255, 255, 0.03) 0%,
+        rgba(255, 255, 255, 0.03) 8%,
+        transparent 8%,
+        transparent 92%
+      ),
+      radial-gradient(
+        circle at 55% 100%,
+        rgba(255, 255, 255, 0.03) 0%,
+        rgba(255, 255, 255, 0.03) 8%,
+        transparent 8%,
+        transparent 92%
+      ),
+      radial-gradient(
+        circle at 40% 75%,
+        rgba(255, 255, 255, 0.03) 0%,
+        rgba(255, 255, 255, 0.03) 6%,
+        transparent 6%,
+        transparent 94%
+      ),
+      radial-gradient(
+        circle at 7% 99%,
+        rgba(255, 255, 255, 0.03) 0%,
+        rgba(255, 255, 255, 0.03) 6%,
+        transparent 6%,
+        transparent 94%
+      ),
+      radial-gradient(
+        circle at 69% 76%,
+        rgba(255, 255, 255, 0.03) 0%,
+        rgba(255, 255, 255, 0.03) 6%,
+        transparent 6%,
+        transparent 94%
+      ),
+      radial-gradient(
+        circle at 2% 35%,
+        rgba(255, 255, 255, 0.03) 0%,
+        rgba(255, 255, 255, 0.03) 6%,
+        transparent 6%,
+        transparent 94%
+      ),
+      radial-gradient(
+        circle at 14% 48%,
+        rgba(255, 255, 255, 0.03) 0%,
+        rgba(255, 255, 255, 0.03) 6%,
+        transparent 6%,
+        transparent 94%
+      ),
+      radial-gradient(
+        circle at 28% 87%,
+        rgba(255, 255, 255, 0.04) 0%,
+        rgba(255, 255, 255, 0.04) 4%,
+        transparent 4%,
+        transparent 96%
+      ),
+      radial-gradient(
+        circle at 65% 14%,
+        rgba(255, 255, 255, 0.04) 0%,
+        rgba(255, 255, 255, 0.04) 4%,
+        transparent 4%,
+        transparent 96%
+      ),
+      radial-gradient(
+        circle at 51% 36%,
+        rgba(255, 255, 255, 0.04) 0%,
+        rgba(255, 255, 255, 0.04) 4%,
+        transparent 4%,
+        transparent 96%
+      ),
+      radial-gradient(
+        circle at 6% 93%,
+        rgba(255, 255, 255, 0.04) 0%,
+        rgba(255, 255, 255, 0.04) 4%,
+        transparent 4%,
+        transparent 96%
+      ),
+      linear-gradient(135deg, rgb(23, 233, 173), rgb(29, 24, 208));
+  } */
+  @keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(3deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-3deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+  /* .bg.wiggle {
+    animation: wiggle 5s ease-in-out infinite;
+  } */
+  
+  .bg {
+    /* background-image: url('./images/anushka.png'); */
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+    transition: background-image 0.2s ease;
+   /* animation: wiggle 5s ease-in-out infinite; Add this line */
+  }
+  
+  /* FORM inside */
+  .registration {
+    color: #f7f6f2;
+    /* font-weight: bold; */
+    font-family: "Poppins-Bold";
+    font-weight: bold;
+    font-size: 35px;
+    justify-self: center;
+    /* text-decoration: underline; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .form-labels {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #f7f6f2;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    font-family: "Poppins-SemiBold";
+  }
+  .form-labels2 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #f7f6f2;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: "Poppins-SemiBold";
+  }
+  
+  .content-personeldetails {
+    margin-right: 15vw;
+    margin-left: 10vw;
+    gap: 20px;
+  }
+  #no {
+    font-family: "Poppins-Regular";
+    font-size:15px;
+    color:#f7f6f2;
+    text-align: left;
+    /* justify-content: left; */
+  
+  }
+  
+  .formentry {
+    /* font-style:Maitree_SemiBold; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .formentry label {
+    flex-basis: 25%; /* Adjust width as needed */
+    margin-right: 10px; /* Adjust margin as needed */
+    text-align: right; /* Align text to the right */
+    font-family: "Poppins-Semibold";
+  }
+  
+  .formentry input {
+    flex-grow: 1;
+  }
+  
+  #fname,
+  #froll,
+  #fbranch,
+  #fnumber,
+  #femail,
+  #fhostel,
+  #fcg {
+    font-size: 15px;
+    
+    color: #f7f6f2;
+    background: linear-gradient(135deg,rgba(255,255,255,0),rgba(255,255,255,0));
+    border-top: 1px solid rgba(255, 255, 255, 0);
+    border-left: 1px solid rgba(255, 255, 255, 0);
+    border-right: 1px solid rgba(255, 255, 255, 0);
+    backdrop-filter: blur(5px); 
+    -webkit-backdrop-filter: blur(5px);
+    
+    /* box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); */
+    border-bottom: 2px solid rgb(255, 255, 255);
+  }
+  #fname:focus,
+  #froll:focus,
+  #fbranch:focus,
+  #fnumber:focus,
+  #femail:focus,
+  #fhostel:focus,
+  #fcg:focus {
+    outline: none;
+  }
+  #fname::placeholder,
+  #froll::placeholder,
+  #fbranch::placeholder,
+  #fnumber::placeholder,
+  #femail::placeholder,
+  #fhostel::placeholder,
+  #fcg::placeholder {
+    color: #caddfa;
+    size:16px;
+    font-family:"Poppins-Regular";
+  }
+  
+  
+  
+  
+  #textefft {
+    font-family: "Poppins-Regular";
+    color: #f7f6f2;
+    font-size: 15px;
+    /* font-weight: bold; */
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .content-radio {
+    font-family: "Poppins-Regular";
+    color: #f7f6f2;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-weight: lighter;
+  }
+  
+  .form-radiobtns {
+    margin-bottom: -50px;
+  }
+  
+  .formentryRadio {
+    font-family: "Poppins-Regular";
+    font-size: 16px;
+    /* font-weight: bold; */
+    color: #f7f6f2;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    gap: 20px;
+  }
+  .radio {
+    justify-self: center;
+  }
+  
+  .content-questions {
+    margin-left: 30px;
+    font-family: "Popins-Regular";
+  
+  }
+  
+  .formentryquestions {
+    margin-bottom: 30px;
+    font-family: "Poppins-Regular";
+  }
+  
+  #textques{
+    color: #f7f6f2;
+    font-family: "Poppins-Regular";
+    font-size:15px;
+  }
+  
+  /* #q1,
+  #q2,
+  #q3,
+  #q4,
+  #q5,
+  #q6,
+  #q7,
+  #q8,
+  #q9,
+  #q10 {
+    margin-top: 5px;
+    font-family: "Poppins-Regular";
+    width: 95%;
+    color: #f7f6f2;
+    /* background-color: #0048f1; */
+    /* background: linear-gradient(135deg,rgba(255,255,255,0),rgba(255,255,255,0));  */
+    /* border-top: 1px solid rgba(255, 255, 255, 0);
+    border-left: 1px solid rgba(255, 255, 255, 0);
+    border-right: 1px solid rgba(255, 255, 255, 0); */
+    border:none;
+    backdrop-filter: blur(5px); 
+    -webkit-backdrop-filter: blur(5px);
+    /* border-bottom: 2px solid rgb(255, 255, 255); */
+    overflow-wrap: break-word;
+  } */
+  
+  #q1:focus,
+  #q2:focus,
+  #q3:focus,
+  #q4:focus,
+  #q5:focus,
+  #q6:focus,
+  #q7:focus,
+  #q8:focus {
+    outline: none;
+  }
+  
+  
+  .textbox{
+    width:100%;
+    overflow:hidden;
+    font-family: "Poppins-Regular";
+    border-bottom: 2px solid rgb(255, 255, 255); 
+  }
+  .textbox input{
+    border:none;
+    outline:none;
+    background:none;
+    margin-top: 5px;
+    /* color:#f7f6f2; */
+    width: 100%;
+  
+  }
+  .form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  /* Buttons */
+  #show-button-1,#show-button-2{
+    border: 2px;
+    border-radius: 6px;
+    font-family: "Poppins-Regular";
+    font-size: 16px;
+    text-align: center;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #2b32b2;
+  }
+  
+  #show-button-1:hover,#show-button-2:hover {
+    font-family: "Poppins-Regular";
+    font-size: 16px;
+    font-weight: bold;
+    background-color: white;
+    color: #2b32b2;
+  }
+  
+  .submitBtn{
+    font-family: "Poppins-SemiBold";
+    /* margin-top: 5px; */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .submit-button{  
+    display: inline-block;
+    outline: 0;
+    border: 100px;
+    font-family: "Poppins-SemiBold";
+    cursor: pointer;
+    will-change: box-shadow,transform;
+    background-color: #2b32b2;
+    box-shadow: 0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px rgb(58 65 111 / 50%);
+    padding: 0 32px;
+    border-radius: 6px;
+    color: #fff;
+    height: 48px;
+    font-size: 18px;
+    text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+    transition: box-shadow 0.15s ease,transform 0.15s ease;
+  }
+  
+  .submit-button:hover {
+    box-shadow: inset 0px 3px 7px #3c4fe0;
+    color:#2b32b2;
+    background-color: #f7f6f2;
+    transform: translateY(2px);
+    font-family: "Poppins-SemiBold";
+  }
+  
+  .submit-button:active{
+        box-shadow: 0px 4px 8px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgba(0, 0, 0, 0.3), inset 0px -3px 0px #3c4fe0;
+        transform: translateY(-2px);
+        font-family: "Poppins-SemiBold";
+  }
+  
+  /* LOGO */
+  .logo {
+    /* align-items: center; */
+    justify-content: center;
+    margin-bottom: 70vh;
+    padding-top: 40px;
+    position: absolute;
+    object-fit: contain;
+    height: 100px;
+    width:160px;
+    z-index: 8;
+    transition: all 0.5s ease;
+  }
+  
