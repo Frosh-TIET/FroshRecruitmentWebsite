@@ -1,10 +1,10 @@
-  @font-face {
+@font-face {
     font-family: "Milligram-Bold-trial";
     src: url("../Final/fonts/Milligram-Bold-trial.ttf");
   }
   @font-face {
     font-family: "Xillian Regular";
-    src: url("../Final/fonts/Xillian/Regular.otf");
+    src: url("../Final/fonts/Xillian\ Regular.otf");
   }
   @font-face {
     font-family: "LTSuperior-Semibold";
@@ -20,7 +20,7 @@
   }
   @font-face {
     font-family: "Mango Grotesque-VF";
-    src: url("../Final/fonts/Mango/Grotesque-VF.ttf");
+    src: url("../Final/fonts/Mango\ Grotesque-VF.ttf");
   }
   @font-face {
     font-family: "Helvetica-Bold";
@@ -30,8 +30,20 @@
     font-family: "Helvetica";
     src: url("../Final/fonts/Helvetica.ttf");
   }
-
-
+  @font-face {
+    font-family: "Poppins-Bold";
+    src: url("../Final/fonts/Poppins-Bold.ttf");
+  }
+  @font-face {
+    font-family: "Poppins-Regular";
+    src: url("../Final/fonts/Poppins-Regular.ttf");
+  }
+  @font-face {
+    font-family: "Poppins-SemiBold";
+    src: url("../Final/fonts/Poppins-SemiBold.ttf");
+  }
+  
+  
   html{
     scrollbar-width: none;
   }
@@ -39,7 +51,7 @@
     width: 10px;
     display: none;
   }
-
+  
   .card-inner::-webkit-scrollbar-thumb {
     border-radius: 30px;
     background: -webkit-gradient(
@@ -54,12 +66,12 @@
     box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25),
       inset -2px -2px 2px rgba(0, 0, 0, 0.25);
   }
-
+  
   .card-inner::-webkit-scrollbar-track {
     background-color: #292d99;
     /* background: linear-gradient(to right,#201c29,#201c29 1px,#100e17 1px,#100e17); */
   }
-
+  
   body {
     height: 100%;
     width: 100vw;
@@ -67,21 +79,21 @@
     background-color: #2b32b2;
     padding: 0px;
     margin: 0px;
-    overflow-x: hidden;
+    overflow: auto;
   }
   body::-webkit-scrollbar{
     display:none;
   }
-
+  
   .container1 {
     position: relative;
-    height: 100vh; /* Minimum height for each container */
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-
+  
   .container2 {
     height: 100vh; /* Full viewport height */
     width: 100vw; /* Full viewport width */
@@ -90,18 +102,18 @@
     justify-content: center;
     /* background-repeat: url("../Final/images/0001-0096.mkv"); */
     background-image: url("./images/werf.png"); 
-    background-size: sticky;
+    background-size: cover;
     align-items: center;
     /* overflow: auto;  */
     z-index: 1;
   }
-
-
-
+  
+  
+  
   /* .bg1,.bg2{
     flex:1;
     height:100%;
-
+  
   } */
   /* .bg1{
     background-image: url("./images/half1.png");
@@ -117,20 +129,20 @@
     background-attachment: fixed;
     overflow: hidden;
   } */
-
+  
   .canvas-container {
     width: 100%;
     height: 100vh;
     z-index: 0;
   }
-
+  
   canvas {
     display: block;
     width: 100%;
     height: 100%;
     /* Additional styling for canvas if needed */
   }
-
+  
   /* ARROW */
   .arrow-image {
     position: absolute;
@@ -141,7 +153,7 @@
     z-index: 1;
     animation: bounceUpDown 2s ease-in-out infinite;
   }
-
+  
   @keyframes bounceUpDown {
     0%,
     100% {
@@ -151,14 +163,14 @@
       transform: translateY(-10px);
     }
   }
-
+  
   /* Form */
   form {
     margin-top: 100px;
     height: 50vh;
     width: 60vw;
     background: linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0));
-
+  
     position: absolute;
     border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 50px; 
@@ -166,17 +178,19 @@
     -webkit-backdrop-filter: blur(10px);
     
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    padding: 50px 35px; 
+    padding: 50px 35px;
+    /* margin-left: 54vh; */
   }
-
+  
   form input {
-    font-family: "Helvetica";
+    color:#f7f6f2;
+    font-family: "Poppins-Regular";
   }
   .card-inner {
     overflow-y: auto;
     max-height: calc(140% - 20vh);
   }
-
+  
   /* .bg {
     z-index: -1;
     height: 100%;
@@ -271,26 +285,26 @@
     75% { transform: rotate(-3deg); }
     100% { transform: rotate(0deg); }
   }
-
+  
   /* .bg.wiggle {
     animation: wiggle 5s ease-in-out infinite;
   } */
-
+  
   .bg {
     /* background-image: url('./images/anushka.png'); */
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     overflow: hidden;
-    /* transition: background-image 0.2s ease; */
-  /* animation: wiggle 5s ease-in-out infinite; Add this line */
+    transition: background-image 0.2s ease;
+   /* animation: wiggle 5s ease-in-out infinite; Add this line */
   }
-
+  
   /* FORM inside */
   .registration {
     color: #f7f6f2;
     /* font-weight: bold; */
-    font-family: "Helvetica-Bold";
+    font-family: "Poppins-Bold";
     font-weight: bold;
     font-size: 35px;
     justify-self: center;
@@ -299,7 +313,7 @@
     display: flex;
     justify-content: center;
   }
-
+  
   .form-labels {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -307,7 +321,7 @@
     font-size: 25px;
     display: flex;
     justify-content: center;
-    font-family: "Helvetica-Bold";
+    font-family: "Poppins-SemiBold";
   }
   .form-labels2 {
     margin-top: 30px;
@@ -317,23 +331,23 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    font-family: "Helvetica-Bold";
+    font-family: "Poppins-SemiBold";
   }
-
+  
   .content-personeldetails {
     margin-right: 15vw;
     margin-left: 10vw;
     gap: 20px;
   }
   #no {
-    font-family: "Helvetica";
+    font-family: "Poppins-Regular";
     font-size:15px;
     color:#f7f6f2;
     text-align: left;
     /* justify-content: left; */
-
+  
   }
-
+  
   .formentry {
     /* font-style:Maitree_SemiBold; */
     display: flex;
@@ -341,27 +355,27 @@
     align-items: center;
     margin-bottom: 10px;
   }
-
+  
   .formentry label {
     flex-basis: 25%; /* Adjust width as needed */
     margin-right: 10px; /* Adjust margin as needed */
     text-align: right; /* Align text to the right */
-    font-family: "Helvetica";
+    font-family: "Poppins-Semibold";
   }
-
+  
   .formentry input {
     flex-grow: 1;
   }
-
+  
   #fname,
   #froll,
   #fbranch,
   #fnumber,
   #femail,
   #fhostel,
-  #fcg ,
-  #talent-link{
+  #fcg {
     font-size: 15px;
+    
     color: #f7f6f2;
     background: linear-gradient(135deg,rgba(255,255,255,0),rgba(255,255,255,0));
     border-top: 1px solid rgba(255, 255, 255, 0);
@@ -373,40 +387,41 @@
     /* box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); */
     border-bottom: 2px solid rgb(255, 255, 255);
   }
-
   #fname:focus,
   #froll:focus,
   #fbranch:focus,
   #fnumber:focus,
   #femail:focus,
   #fhostel:focus,
-  #fcg:focus,
-  #talent-link:focus {
+  #fcg:focus {
     outline: none;
   }
-
   #fname::placeholder,
   #froll::placeholder,
   #fbranch::placeholder,
   #fnumber::placeholder,
   #femail::placeholder,
   #fhostel::placeholder,
-  #fcg::placeholder ,
-  #talent-link::placeholder{
-    color: #bcbdc5;
+  #fcg::placeholder {
+    color: #caddfa;
+    size:16px;
+    font-family:"Poppins-Regular";
   }
-
+  
+  
+  
+  
   #textefft {
-    font-family: "Helvetica";
+    font-family: "Poppins-Regular";
     color: #f7f6f2;
     font-size: 15px;
     /* font-weight: bold; */
     display: flex;
     justify-content: flex-end;
   }
-
+  
   .content-radio {
-    font-family: "Helvetica";
+    font-family: "Poppins-Regular";
     color: #f7f6f2;
     font-size: 20px;
     display: flex;
@@ -414,13 +429,13 @@
     text-align: center;
     font-weight: lighter;
   }
-
+  
   .form-radiobtns {
     margin-bottom: -50px;
   }
-
+  
   .formentryRadio {
-    font-family: "Helvetica";
+    font-family: "Poppins-Regular";
     font-size: 16px;
     /* font-weight: bold; */
     color: #f7f6f2;
@@ -432,46 +447,50 @@
   .radio {
     justify-self: center;
   }
-
+  
   .content-questions {
     margin-left: 30px;
-    font-family: "Helvetica";
-
+    font-family: "Popins-Regular";
+  
   }
-
+  
   .formentryquestions {
     margin-bottom: 30px;
-    font-family: "Helvetica";
+    font-family: "Poppins-Regular";
   }
-
+  
   #textques{
     color: #f7f6f2;
-    font-family: "Helvetica";
+    font-family: "Poppins-Regular";
     font-size:15px;
   }
-
-  #q1,
+  
+  /* #q1,
   #q2,
   #q3,
   #q4,
   #q5,
   #q6,
   #q7,
-  #q8 {
+  #q8,
+  #q9,
+  #q10 {
     margin-top: 5px;
-    font-family: "Helvetica";
+    font-family: "Poppins-Regular";
     width: 95%;
     color: #f7f6f2;
-    background: linear-gradient(135deg,rgba(255,255,255,0),rgba(255,255,255,0));
-    border-top: 1px solid rgba(255, 255, 255, 0);
+    /* background-color: #0048f1; */
+    /* background: linear-gradient(135deg,rgba(255,255,255,0),rgba(255,255,255,0));  */
+    /* border-top: 1px solid rgba(255, 255, 255, 0);
     border-left: 1px solid rgba(255, 255, 255, 0);
-    border-right: 1px solid rgba(255, 255, 255, 0);
+    border-right: 1px solid rgba(255, 255, 255, 0); */
+    /* border:none;
     backdrop-filter: blur(5px); 
-    -webkit-backdrop-filter: blur(5px);
-    border-bottom: 2px solid rgb(255, 255, 255);
-    overflow-wrap: break-word;
-  }
-
+    -webkit-backdrop-filter: blur(5px); */
+    /* border-bottom: 2px solid rgb(255, 255, 255); */
+    /* overflow-wrap: break-word; */
+  /* }  */
+  
   #q1:focus,
   #q2:focus,
   #q3:focus,
@@ -482,88 +501,89 @@
   #q8:focus {
     outline: none;
   }
-
+  
+  
+  .textbox{
+    width:100%;
+    overflow:hidden;
+    font-family: "Poppins-Regular";
+    border-bottom: 2px solid #f7f6f2;
+  }
+  .textbox input{
+    border:none;
+    outline:none;
+    background:none;
+    margin-top: 5px;
+    /* color:#f7f6f2; */
+    width: 100%;
+  
+  }
   .form-buttons {
     display: flex;
     justify-content: center;
     gap: 10px;
   }
-
+  
   /* Buttons */
   #show-button-1,#show-button-2{
     border: 2px;
     border-radius: 6px;
-    font-family: Lora;
+    font-family: "Poppins-Regular";
     font-size: 16px;
     text-align: center;
     transition-duration: 0.4s;
     cursor: pointer;
-    color: #ffffff;
+    color: #f7f6f2;
     background-color: #2b32b2;
   }
-
+  
   #show-button-1:hover,#show-button-2:hover {
-    font-family: Lora;
+    font-family: "Poppins-Regular";
     font-size: 16px;
     font-weight: bold;
-    background-color: white;
+    background-color: #f7f6f2;
     color: #2b32b2;
   }
-
+  
   .submitBtn{
-    font-family: "Helvetica";
+    font-family: "Poppins-SemiBold";
     /* margin-top: 5px; */
     display: flex;
     justify-content: center;
   }
-
+  
   .submit-button{  
     display: inline-block;
     outline: 0;
     border: 100px;
-    font-family: "Helvetica";
+    font-family: "Poppins-SemiBold";
     cursor: pointer;
     will-change: box-shadow,transform;
     background-color: #2b32b2;
     box-shadow: 0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px rgb(58 65 111 / 50%);
     padding: 0 32px;
     border-radius: 6px;
-    color: #fff;
+    color: #f7f6f2;
     height: 48px;
     font-size: 18px;
     text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
     transition: box-shadow 0.15s ease,transform 0.15s ease;
   }
-
+  
   .submit-button:hover {
     box-shadow: inset 0px 3px 7px #3c4fe0;
     color:#2b32b2;
     background-color: #f7f6f2;
     transform: translateY(2px);
-    font-family: "Helvetica";
+    font-family: "Poppins-SemiBold";
   }
-
+  
   .submit-button:active{
         box-shadow: 0px 4px 8px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgba(0, 0, 0, 0.3), inset 0px -3px 0px #3c4fe0;
         transform: translateY(-2px);
-        font-family: "Helvetica";
+        font-family: "Poppins-SemiBold";
   }
-
-  #demo,#talent-text{
-    font-family:"Helvetica" ;
-    margin-top: 20px;
-    color: white;
-    /* font-weight: bold; */
-    display: flex;
-    justify-content: center;
-  }
-
-  #talent-link {
-    width: 70% ;
-    box-sizing: border-box; /* Ensure padding and border are included in the width */
-    display: block; /* Ensure it takes the full width available */
-    margin: auto; /* Center horizontally */
-  }
+  
   /* LOGO */
   .logo {
     /* align-items: center; */
@@ -577,16 +597,45 @@
     z-index: 8;
     transition: all 0.5s ease;
   }
-
-
-/* Media Query */
-@media only screen and (max-width: 768px) {
-  #canvas3d {
-    height: 90vh;
-    width:100vw;
-  }
-  .container2 {
-    background-size: contain;
-  }
-}
   
+  #demo,#talent-text{
+    font-family:"Poppins-Semibold";
+    font-size:15px;
+    margin-top: 20px;
+    color: white;
+    /* font-weight: bold; */
+    display: flex;
+    justify-content: center;
+  }
+  #talent-link{
+    font-size: 15px;
+    justify-content: center;
+    width: 70% ;
+    box-sizing: border-box; 
+    margin: auto;
+    color: #f7f6f2;
+    background: linear-gradient(135deg,rgba(255,255,255,0),rgba(255,255,255,0));
+    border-top: 1px solid rgba(255, 255, 255, 0);
+    border-left: 1px solid rgba(255, 255, 255, 0);
+    border-right: 1px solid rgba(255, 255, 255, 0);
+    backdrop-filter: blur(5px); 
+    -webkit-backdrop-filter: blur(5px);
+    
+    /* box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); */
+    border-bottom: 2px solid rgb(255, 255, 255);
+  }
+
+  #talent-link::placeholder {
+    color: #caddfa;
+    size:16px;
+    font-family:"Poppins-Regular";
+  }
+  @media only screen and (max-width: 768px) {
+    #canvas3d {
+      height: 90vh;
+      width:100vw;
+    }
+    .container2 {
+      background-size: contain;
+    }
+  }
