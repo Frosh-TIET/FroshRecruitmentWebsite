@@ -34,7 +34,7 @@ function submitForm(e){
   var Resilience = document.querySelector('input[name="resilience"]:checked').value;
   var Creativity = document.querySelector('input[name="creativity"]:checked').value;
   var Time_Management = document.querySelector('input[name="timemanagement"]:checked').value;
-  //var Decisiveness = document.querySelector('input[name="Decisiveness"]:checked').value;
+  var Decisiveness = document.querySelector('input[name="Decisiveness"]:checked').value;
   var q1=getElementValue('q1');
   var q2=getElementValue('q2');
   var q3=getElementValue('q3');
@@ -47,7 +47,7 @@ function submitForm(e){
   var q10=getElementValue('q10');
   var talent_link=getElementValue('talent-link');
 
-  saveForm(name,emailid,rollno,phone,branch,cg,hostel,Adaptability,Resilience,Creativity,Time_Management,q1,q2,q3,q4,q5,q6,q8,q9,q10,talent_link);
+  saveForm(name,emailid,rollno,phone,branch,cg,hostel,Adaptability,Resilience,Creativity,Time_Management,Decisiveness,q1,q2,q3,q4,q5,q6,q7,q8,q9,q10,talent_link);
 
 }
 
@@ -67,14 +67,14 @@ const saveForm=(name,emailid,rollno,phone,branch,cg,hostel,Adaptability,Resilien
     Resilience:Resilience,
     Creativity:Creativity,
     TimeManagement:Time_Management,
-    //Decisiveness:Decisiveness,
+    Decisiveness:Decisiveness,
     Question1:q1,
     Question2:q2,
     Question3:q3,
     Question4:q4,
     Question5:q5,
     Question6:q6,
-    // Question7:q7,
+    Question7:q7,
     Question8:q8,
     Question9:q9,
     Question10:q10,
