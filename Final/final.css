@@ -452,6 +452,8 @@
   
   .form-radiobtns {
     margin-bottom: -50px;
+    font-family: "Poppins-Regular";
+    justify-self: right;
   }
   
   .formentryRadio {
@@ -460,12 +462,16 @@
     /* font-weight: bold; */
     color: #f7f6f2;
     display: flex;
-    justify-content: center;
+    flex:1;
+    justify-content: right;
     margin-bottom: 10px;
+    margin-right:39vh;
     gap: 20px;
   }
   .radio {
-    justify-self: center;
+    justify-items: right;
+    justify-self: right;
+    justify-content: space-between;
   }
   
   .content-questions {
@@ -547,7 +553,7 @@
   /* Buttons */
   #show-button-1,#show-button-2{
     border: 2px;
-    border-radius: 6px;
+    border-radius: 50px;
     font-family: "Poppins-Regular";
     font-size: 16px;
     text-align: center;
@@ -659,4 +665,20 @@
     .container2 {
       background-size: contain;
     }
+  }
+
+
+  #qualities{
+    justify-content: left;
+
+
+  }
+  .details{
+      margin-top: 14px;
+      margin-bottom: 30px;
+      color: #f7f6f2;
+      font-size: 25px;
+      display: flex;
+      justify-content: center;
+      font-family: "Poppins-SemiBold";
   }
