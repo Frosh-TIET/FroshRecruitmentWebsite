@@ -62,7 +62,7 @@ const saveForm=(name,emailid,rollno,phone,branch,cg,hostel,Adaptability,Resilien
     Phone:phone,
     Branch:branch,
     CG:cg,
-    Hostel:hostel,
+    DayScholar:hostel,
     Adaptability:Adaptability,
     Resilience:Resilience,
     Creativity:Creativity,

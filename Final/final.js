@@ -1,9 +1,20 @@
 import { Application } from '@splinetool/runtime';
 
 const canvas = document.getElementById('canvas3d');
-const app = new Application(canvas);
-app.load('https://prod.spline.design/VufIgZe7y0IUh0fl/scene.splinecode');
 
+if ("IntersectionObserver" in window) {
+  let observer = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        const app = new Application(canvas);
+        app.load('https://prod.spline.design/VufIgZe7y0IUh0fl/scene.splinecode');
+        observer.unobserve(entry.target);
+      }
+    });
+  });
+
+  observer.observe(canvas);
+}
 //arrow animatioin
 document.addEventListener("DOMContentLoaded", function () {
     const arrow = document.getElementById("scroll-down-arrow");

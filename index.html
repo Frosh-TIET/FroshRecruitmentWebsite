@@ -58,7 +58,7 @@
                     </div>
                     <div class="formentry">
                         <label for="fcg" id="textefft">CGPA</label>
-                        <input type="number" id="fcg" placeholder="e.g. 8.36" name="userCg" min="0" max="10" required>
+                        <input type="number" id="fcg" placeholder="e.g. 8.36" name="userCg" min="0" max="10" step="any" required>
                     </div>
                     <div class="formentry">
                         <label for="fhostel" id="textefft">Day Scholar</label>
@@ -282,7 +282,7 @@
                         <input type="text" id="talent-link" style="display: none;" placeholder="Paste link here">
                         <h1 class="form-labels23">Final Submission</h1>
                         <div class="submitBtn">
-                            <button type="submit" class="submit-button">Submit</button>
+                            <button type="submit" class="submit-button" onclick="submitFunction()">Submit</button>
                         </div>
                         <div id="demo"></div>
                     </div>
