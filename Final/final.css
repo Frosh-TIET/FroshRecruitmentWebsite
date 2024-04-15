@@ -299,7 +299,7 @@
     transition: background-image 0.2s ease;
    /* animation: wiggle 5s ease-in-out infinite; Add this line */
   }
-  
+
   /* FORM inside */
   .registration {
     color: #f7f6f2;
@@ -333,6 +333,26 @@
     text-align: center;
     font-family: "Poppins-SemiBold";
   }
+  .form-labels23 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #f7f6f2;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: "Poppins-SemiBold";
+  }
+  /* .form-labels3{
+    color: #f7f6f2;
+    font-size: 25px;
+    justify-content: center;
+    font-family: "Poppins-SemiBold";
+    text-align: center;
+    margin-bottom: 20px;
+
+
+  } */
   
   .content-personeldetails {
     margin-right: 15vw;
@@ -555,26 +575,27 @@
   .submit-button{  
     display: inline-block;
     outline: 0;
-    border: 100px;
+    border: 10px;
     font-family: "Poppins-SemiBold";
     cursor: pointer;
     will-change: box-shadow,transform;
     background-color: #2b32b2;
-    box-shadow: 0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px rgb(58 65 111 / 50%);
-    padding: 0 32px;
-    border-radius: 6px;
+    /* box-shadow: 0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px rgb(58 65 111 / 50%); */
+    padding: 0 25px;
+    border-radius: 50px;
     color: #f7f6f2;
     height: 48px;
-    font-size: 18px;
+    font-size: 15px;
     text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+    justify-content: center;
     transition: box-shadow 0.15s ease,transform 0.15s ease;
   }
   
   .submit-button:hover {
-    box-shadow: inset 0px 3px 7px #3c4fe0;
+    box-shadow: inset 0px 3px 7px #2b32b2;
     color:#2b32b2;
     background-color: #f7f6f2;
-    transform: translateY(2px);
+    transform: translateY(1px);
     font-family: "Poppins-SemiBold";
   }
   
@@ -601,7 +622,7 @@
   #demo,#talent-text{
     font-family:"Poppins-Semibold";
     font-size:15px;
-    margin-top: 20px;
+    margin-top:0vh;
     color: white;
     /* font-weight: bold; */
     display: flex;
