@@ -791,7 +791,7 @@ input[type="number"] {
   #fnumber,
   #femail,
   #fhostel,
-  #fcg {
+  #fcg ,#froll,#fbranch{
     font-family: "Poppins-Regular";
     display: flex;
     width: 160%;
@@ -845,16 +845,18 @@ input[type="number"] {
     overflow-x: hidden;
     /* overflow-y: hidden; */
   }
-
+  #no{
+    font-size :12px;
+  }
   .formentryRadio {
     font-family: "Poppins-Regular";
-    font-size: 16px;
+    font-size: 12px;
     overflow-x: hidden;
     color: #f7f6f2;
-    margin-bottom: 10px;
-    margin-left: 5vw;
+    margin-bottom: 9px;
+    margin-left: 3vw;
     margin-right: 0vw;
-    gap: 20px;
+    gap: 12px;
     display: block;
   }
 
