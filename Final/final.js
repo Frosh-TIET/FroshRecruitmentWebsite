@@ -1,7 +1,6 @@
 import { Application } from '@splinetool/runtime';
 
 const canvas = document.getElementById('canvas3d');
-
 if ("IntersectionObserver" in window) {
   let app;
   let observer = new IntersectionObserver(function(entries, observer) {
@@ -20,7 +19,6 @@ if ("IntersectionObserver" in window) {
       }
     });
   });
-
   observer.observe(canvas);
 }
 //arrow animatioin
