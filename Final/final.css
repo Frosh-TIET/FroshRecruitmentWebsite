@@ -670,12 +670,21 @@ form input {
   transition: all 0.5s ease;
 }
 
-#demo,
+
 #talent-text {
   font-family: "Poppins-Semibold";
   font-size: 15px;
-  margin-top: 0vh;
+  margin-top: 5vh;
   color: white;
+  /* font-weight: bold; */
+  display: flex;
+  justify-content: center;
+}
+#demo{
+  font-family: "Poppins-Semibold";
+  font-size: 15px;
+  margin-top: 0vh;
+  color: #f7f6f2;
   /* font-weight: bold; */
   display: flex;
   justify-content: center;
@@ -856,7 +865,7 @@ input[type="number"] {
     margin-bottom: 9px;
     margin-left: 3vw;
     margin-right: 0vw;
-    gap: 12px;
+    gap: 9px;
     display: block;
   }
 
