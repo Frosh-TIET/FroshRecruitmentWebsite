@@ -726,6 +726,7 @@ input[type="number"] {
 
   .container2 {
     background-size: contain;
+    background-image: url("./images/werf_mobile.png");
   }
 }
 
@@ -757,12 +758,21 @@ input[type="number"] {
     gap: 20px;
     display: block;
   }
+  #canvas3d {
+    height: 90vh;
+    width: 100vw;
+  }
+
+  .container2 {
+    background-size: cover;
+    background-image: url("./images/werf_mobile.png");
+  }
 
   .logo {
     position: absolute;
     margin-bottom: 80vh;
     /* transform: translateX(-50%); */
-    width: 300px;
+    width: 100px;
     height: 110px;
     z-index: 1;
     /* animation: bounceUpDown 2s ease-in-out infinite; */
@@ -826,8 +836,14 @@ input[type="number"] {
 }
 
 @media screen and (max-width: 480px) {
+  
+  .container2 {
+    background-size: cover;
+    background-image: url("./images/werf_mobile.png");
+  }
   body {
     overflow-x: hidden;
+    /* overflow-y: hidden; */
   }
 
   .formentryRadio {
@@ -844,9 +860,9 @@ input[type="number"] {
 
   .logo {
     position: absolute;
-    margin-bottom: 80vh;
+    margin-bottom: 75vh;
     /* transform: translateX(-50%); */
-    width: 300px;
+    width: 150px;
     height: 110px;
     z-index: 1;
     /* animation: bounceUpDown 2s ease-in-out infinite; */
@@ -866,7 +882,8 @@ input[type="number"] {
   #femail,
   #fhostel,
   #fcg,
-  #fbranch {
+  #fbranch,
+  #froll {
     font-family: "Poppins-Regular";
     display: flex;
     width: 160%;
@@ -888,7 +905,13 @@ input[type="number"] {
     justify-self: center;
     text-align: center;
   }
-
+  .form-labels{
+    font-size:21px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align:center;
+  }
   /* form{
     height: 700px;
   } */
