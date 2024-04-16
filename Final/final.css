@@ -846,11 +846,11 @@ input[type="number"] {
     /* overflow-y: hidden; */
   }
   #no{
-    font-size :12px;
+    font-size :13px;
   }
   .formentryRadio {
     font-family: "Poppins-Regular";
-    font-size: 12px;
+    font-size: 13px;
     overflow-x: hidden;
     color: #f7f6f2;
     margin-bottom: 9px;
