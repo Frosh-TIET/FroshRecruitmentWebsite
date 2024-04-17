@@ -46,7 +46,7 @@ function submitForm(e){
 
   var saveSuccessfull=saveForm(name,emailid,rollno,phone,branch,cg,Adaptability,Resilience,Creativity,Time_Management,Decisiveness,q1,q2,q3,q4,q5,q6,q7,q8,talent_link);
   if(saveSuccessfull){
-    window.location.href = 'thankyou.html';
+    window.location.href = 'Final/thankyou.html';
   }
   else{
     alert("Form Submission Failed");
@@ -54,10 +54,10 @@ function submitForm(e){
 
 }
 
-const saveForm=(name,emailid,rollno,phone,branch,cg,Adaptability,Resilience,Creativity,Time_Management,Decisiveness,q1,q2,q3,q4,q5,q6,q8,talent_link)=>{
+const saveForm=(name,emailid,rollno,phone,branch,cg,Adaptability,Resilience,Creativity,Time_Management,Decisiveness,q1,q2,q3,q4,q5,q6,q7,q8,talent_link)=>{
   var newRecruitmentForm=recruitmentFormDB.push();
   console.log("inside save form function")
-  var saveSuccessfull=false;
+  
   //console.log(name,emailid,rollno,phone,branch,cg,hostel,Adaptability,Resilience,Creativity,Time_Management,Decisiveness,q1,q2,q3,q4,q5,q6,q8,q9,q10,talent_link)
   newRecruitmentForm.set({
     "Name":name,
@@ -66,7 +66,6 @@ const saveForm=(name,emailid,rollno,phone,branch,cg,Adaptability,Resilience,Crea
     "Phone Number":phone,
     "Branch":branch,
     "CG":cg,
-    "DayScholar":hostel,
     "Adaptability":Adaptability,
     "Resilience":Resilience,
     "Creativity":Creativity,
@@ -83,10 +82,8 @@ const saveForm=(name,emailid,rollno,phone,branch,cg,Adaptability,Resilience,Crea
     "TalentLink":talent_link
   });
   console.log("Form Submitted");
-  saveSuccessfull=true;
+  var saveSuccessfull=true;
   return saveSuccessfull;
-
-
 
 };
 

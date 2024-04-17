@@ -89,6 +89,10 @@ body {
   padding: 0px;
   margin: 0px;
   overflow-x: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE/Edge */
+  user-select: none; /* Standard */
 }
 
 body::-webkit-scrollbar {
@@ -855,6 +859,11 @@ input[type="number"] {
     background-size: cover;
     background-image: url("./images/werf_mobile.png");
   }
+  #textques {
+    color: #f7f6f2;
+    font-family: "Poppins-Regular";
+    font-size: 15px;
+  }
 
   body {
     overflow-x: hidden;
@@ -865,6 +874,8 @@ input[type="number"] {
     font-size: 15px;
     text-align: center;
     justify-content: center;
+    justify-self: center;
+    
   }
 
   .formentryRadio {
@@ -924,6 +935,7 @@ input[type="number"] {
   #q8 {
     justify-content: left;
     text-align: left;
+    font-size:1px;
   }
 
   #textefft {
@@ -946,6 +958,12 @@ input[type="number"] {
     flex-direction: row;
     justify-content: center;
     text-align: center;
+  }
+  #Decisiveness,#timemanagement,#creativity,#resilience,#Adaptability{
+    justify-content: center;
+    font-size:40px;
+    margin-left:11px;
+
   }
 
   /* form{
@@ -971,6 +989,19 @@ input[type="number"] {
     position: absolute;
     z-index: 100;
   
+  }
+  #textques{
+    justify-content:left;
+    text-align:left;
+    display:flex;
+    flex-direction: column;
+
+
+
+  }
+  .textbox{
+    justify-content: left;
+    width:160%;
   }
 
   /* .submit-button{

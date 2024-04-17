@@ -19,7 +19,7 @@
         </div>
         <div class="container2 bg">
             <img src="./Final/images/FROSH LOGO 23 AI white-png.png" alt="FROSH LOGO" class="logo" data-aos-delay="30"
-                data-aos="fade-right" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-center">
+                data-aos="fade-right">
             <!-- <div class="bg1" data-aos="fade-right"></div>
         <div class="bg2" data-aos="fade-left"></div> -->
 
@@ -92,7 +92,7 @@
                                 <label for="qualities" id="no">Resilience</label>
                                 <div class="radio">
                                     <label for="no" class="no">1</label>
-                                    <input class="short" type="radio" placeholder=Adaptability" value="1"
+                                    <input class="short" type="radio" placeholder="" name="resilience" value="1"
                                         id="resilience" required />
                                     <label for="no" class="no">2</label>
                                     <input class="short" type="radio" placeholder="" name="resilience" value="2"
@@ -295,7 +295,7 @@
             if (loader.style.display !== "none") {
               setTimeout(function () {
                 loader.style.display = "none";
-              }, 16000);
+              }, 5000);
             }
           </script>
         <script>
@@ -346,6 +346,10 @@
         <script type="module" src="./Final/final.js"></script>
         <script type="module" src="./Final/database.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
 
         <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
         <!-- <script>
