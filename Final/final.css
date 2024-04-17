@@ -113,7 +113,7 @@ body::-webkit-scrollbar {
   flex-direction: row-reverse;
   justify-content: center;
   /* background-repeat: url("../Final/images/0001-0096.mkv"); */
-  background-image: url("./images/werf.webp");
+  background-image: url("./images/werf.png");
   background-size: cover;
   align-items: center;
   /* overflow: auto;  */
@@ -735,7 +735,7 @@ input[type="number"] {
 
   .container2 {
     background-size: contain;
-    background-image: url("./images/werf_mobile.png");
+    background-image: url("./images/werf_mobile.svg");
   }
 }
 
