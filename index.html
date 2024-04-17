@@ -22,7 +22,7 @@
         <div class="bg2" data-aos="fade-left"></div> -->
 
         <!-- Form -->
-        <form action="" id="recruitmentForm" data-aos-delay="30" data-aos="fade-left" data-aos-easing="ease-in-out"
+        <form action="" id="recruitmentForm" 
         data-aos-anchor-placement="top-center">
             <div class="card-inner">
                 <div class="registration">RECRUITMENT FORM</div>
@@ -34,13 +34,14 @@
                         <input type="text" id="fname" placeholder="Your Full Name" name="userName" required>
                     </div>
                     <div class="formentry">
-                        <label for="femail" id="textefft">Thapar ID</label>
-                        <input type="Email" id="femail" placeholder="@thapar.edu only" name="userEmail" required>
-                    </div>
-                    <div class="formentry">
                         <label for="froll" id="textefft">Roll Number</label>
                         <input type="number" id="froll" placeholder="eg. 1023XXXXX" name="userRollnumber"
                             minlength="9" maxlength="9" required>
+                    </div>  
+                    <div class="formentry">
+                        <label for="fbranch" id="textefft">Branch</label>
+                        <input type="text" id="fbranch" placeholder="e.g. ENC" name="userBranch"
+                            required>
                     </div>
                     <div class="formentry">
                         <label for="fnumber" id="textefft">Mobile No.</label>
@@ -48,17 +49,12 @@
                             maxlength="10" required>
                     </div>
                     <div class="formentry">
-                        <label for="fbranch" id="textefft">Branch</label>
-                        <input type="text" id="fbranch" placeholder="e.g. ENC" name="userBranch"
-                            required>
+                        <label for="femail" id="textefft">Thapar ID</label>
+                        <input type="Email" id="femail" placeholder="@thapar.edu only" name="userEmail" required>
                     </div>
                     <div class="formentry">
                         <label for="fcg" id="textefft">CGPA</label>
                         <input type="number" id="fcg" placeholder="e.g. 8.36" name="userCg" min="0" max="10" step="any" required>
-                    </div>
-                    <div class="formentry">
-                        <label for="fhostel" id="textefft">Day Scholar</label>
-                        <input type="text" id="fhostel" placeholder="Y or N" name="userHostel" required>
                     </div>
                 </div>
 
@@ -182,7 +178,8 @@
                     <h2 class="form-labels">Questions</h2>
                     <div class="content-questions">
                         <div class="formentryquestions">
-                            <label for="q1" id="textques">Tell us about yourself.</label><br>
+                            <label for="q1" id="textques">Do you commute to campus regularly or use on-campus housing facilities?
+                            </label><br>
                             <div class="textbox">
                                 <input type="text" name="why" required id="q1" cols="20" rows="8"></input>
                             </div>
@@ -210,28 +207,27 @@
                                 <input type="text" name="unique" required id="q4" cols="50" rows="8"></input>
                             </div>
                         </div>
-
                         <div class="formentryquestions">
-                            <label for="q5" id="textques">What are some ideas you would like to implement this year to
-                                enhance the experience of freshers with Frosh?</label><br>
+                            <label for="q5" id="textques">What improvements do you suggest for Frosh 2023? 
+                            </label><br>
                             <div class="textbox">
-                                <input type="text" name="society" required id="q5" cols="50" rows="8"></input>
+                                <input type="text" name="improve" required id="q5" cols="50" rows="8"></input>
+                            </div>
+                        </div>
+                        <div class="formentryquestions">
+                            <label for="q6" id="textques">If selected, how much time do you think you will need to devote to FROSH daily?</label><br>
+                            <div class="textbox">
+                                <input type="text" name="society" required id="q6" cols="50" rows="8"></input>
                             </div>
                         </div>
 
-                        <div class="formentryquestions">
-                            <label for="q6" id="textques">If you were part of Frosh 2023, what improvements would you
-                                have made? </label><br>
-                            <div class="textbox">
-                                <input type="text" name="improve" required id="q6" cols="50" rows="8"></input>
-                            </div>
-                        </div>
 
+<!-- 
                         <div class="formentryquestions">
                             <label for="q7" id="textques">Are you part of any other societies? If yes, then describe
                                 your contribution in them.</label><br>
                             <div class="textbox">
-                                <input type="text" name="new" required id="q7" cols="50" rows="8"></input>
+                              <input type="text" name="new" required id="q7" cols="50" rows="8"></input>
                             </div>
                         </div>
 
@@ -242,23 +238,23 @@
                                 <input type="text" name="who" required id="q8" cols="50" rows="8"></input>
                             </div>
 
-                        </div>
+                        </div> -->
 
                         <div class="formentryquestions">
-                            <label for="q9" id="textques">
-                                Who should be a part of Frosh 2024 according to you and why?
+                            <label for="q7" id="textques">
+                                According to you, who should be a part of Frosh 2024 according to you and why?
                             </label><br>
                             <div class="textbox">
-                                <input type="text" name="whom" required id="q9" cols="50" rows="8"></input>
+                                <input type="text" name="whom" required id="q7" cols="50" rows="8"></input>
                             </div>
                         </div>
 
                         <div class="formentryquestions">
-                            <label for="q10" id="textques">
-                                Who should not be a part of Frosh 2024 according to you and why?
+                            <label for="q8" id="textques">
+                                According to you, who should not be a part of Frosh 2024 according to you and why?
                             </label><br>
                             <div class="textbox">
-                                <input type="text" name="whom" required id="q10" cols="50" rows="8"></input>
+                                <input type="text" name="whom" required id="q8" cols="50" rows="8"></input>
                             </div>
                         </div>
                     </div>

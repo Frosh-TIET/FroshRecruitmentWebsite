@@ -29,7 +29,6 @@ function submitForm(e){
   var phone=getElementValue('fnumber');
   var branch=getElementValue('fbranch');
   var cg=getElementValue('fcg');
-  var hostel=getElementValue('fhostel');
   var Adaptability = document.querySelector('input[name="Adaptability"]:checked').value;
   var Resilience = document.querySelector('input[name="resilience"]:checked').value;
   var Creativity = document.querySelector('input[name="creativity"]:checked').value;
@@ -43,28 +42,26 @@ function submitForm(e){
   var q6=getElementValue('q6');
   var q7=getElementValue('q7');
   var q8=getElementValue('q8');
-  var q9=getElementValue('q9');
-  var q10=getElementValue('q10');
   var talent_link=getElementValue('talent-link');
 
-  saveForm(name,emailid,rollno,phone,branch,cg,hostel,Adaptability,Resilience,Creativity,Time_Management,Decisiveness,q1,q2,q3,q4,q5,q6,q7,q8,q9,q10,talent_link);
+  saveForm(name,emailid,rollno,phone,branch,cg,Adaptability,Resilience,Creativity,Time_Management,Decisiveness,q1,q2,q3,q4,q5,q6,q7,q8,talent_link);
 
 }
 
-const saveForm=(name,emailid,rollno,phone,branch,cg,hostel,Adaptability,Resilience,Creativity,Time_Management,q1,q2,q3,q4,q5,q6,q8,q9,q10,talent_link)=>{
+const saveForm=(name,emailid,rollno,phone,branch,cg,Adaptability,Resilience,Creativity,Time_Management,Decisiveness,q1,q2,q3,q4,q5,q6,q8,talent_link)=>{
   var newRecruitmentForm=recruitmentFormDB.push();
   console.log("inside save form function")
-  console.log(name,emailid,rollno,phone,branch,cg,hostel,Adaptability,Resilience,Creativity,Time_Management,q1,q2,q3,q4,q5,q6,q8,q9,q10,talent_link)
+  //console.log(name,emailid,rollno,phone,branch,cg,hostel,Adaptability,Resilience,Creativity,Time_Management,Decisiveness,q1,q2,q3,q4,q5,q6,q8,q9,q10,talent_link)
   newRecruitmentForm.set({
-    Name:name,
-    EmailID:emailid,
-    RollNumber:rollno,
-    Phone:phone,
-    Branch:branch,
-    CG:cg,
-    DayScholar:hostel,
-    Adaptability:Adaptability,
-    Resilience:Resilience,
+    "Name":name,
+    "EmailID":emailid,
+    "RollNumber":rollno,
+    "Phone Number":phone,
+    "Branch":branch,
+    "CG":cg,
+    "DayScholar":hostel,
+    "Adaptability":Adaptability,
+    "Resilience":Resilience,
     Creativity:Creativity,
     TimeManagement:Time_Management,
     Decisiveness:Decisiveness,
@@ -76,8 +73,6 @@ const saveForm=(name,emailid,rollno,phone,branch,cg,hostel,Adaptability,Resilien
     Question6:q6,
     Question7:q7,
     Question8:q8,
-    Question9:q9,
-    Question10:q10,
     TalentLink:talent_link
   });
   console.log("Form Submitted");
