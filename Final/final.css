@@ -866,7 +866,9 @@ input[type="number"] {
   }
   #myvideo{
     width: 100%;
-    height: 1500px;
+    height: 1300px;
+    right:1000px;
+
   }
   body {
     overflow-x: hidden;
@@ -934,7 +936,8 @@ input[type="number"] {
     width: 160%;
     flex-direction: row;
     /* margin-left: 50px; */
-    justify-content: center;
+    justify-content: left;
+    text-align:center;
   }
 
   #q1,
@@ -958,11 +961,11 @@ input[type="number"] {
     color: #f7f6f2;
     font-size: 15px;
     display: flex;
-    flex-direction: row;
+    flex:1;
+    flex-direction: row-reverse;
     /* margin-left: 100%; */
-    /* margin-right:14.5vh; */
-    /* justify-content: center; */
-    justify-self: center;
+    /* margin-right:vh; */
+    justify-content:center;
     text-align: center;
   }
 
