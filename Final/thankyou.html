@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submitted</title>
+    <link href="./thankyou.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1 class="form-labels">Your Form has been Submitted.</h1>
+            <p class="form-labels2">We will get back to you soon.</p>
+            <p class="form-labels2" id="countdown"></p>
+        </div>
+    </div>
+    <script>
+        var countdownElement = document.getElementById('countdown');
+        var countdownValue = 10;
+        countdownElement.innerHTML = 'Redirecting you to main site in ' + countdownValue + ' seconds...';
+      
+        var countdownInterval = setInterval(function() {
+          countdownValue--;
+          countdownElement.innerHTML = 'Redirecting you to main site in ' + countdownValue + ' seconds...';
+          if (countdownValue <= 0) {
+            clearInterval(countdownInterval);
+          }
+        }, 1000);
+      
+        setTimeout(function() {
+          window.location.href = 'https://recruitments.froshtiet.com'; // Redirect to froshtiet.com
+        }, 10000);
+      </script>
+</body>
+</html>

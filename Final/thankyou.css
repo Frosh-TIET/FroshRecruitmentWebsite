@@ -1,0 +1,47 @@
+body {
+    height: 100%;
+    width: 100vw;
+    margin: 0;
+    background-color: #2b32b2;
+    padding: 0px;
+    margin: 0px;
+    overflow-x: none;
+  }
+
+.form-labels {
+    color: #f7f6f2;
+    /* font-weight: bold; */
+    font-family: "Poppins-Bold";
+    font-weight: bold;
+    font-size: 65px;
+    justify-self: center;
+    /* text-decoration: underline; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+.container {
+    height: 100vh;
+    /* Full viewport height */
+    width: 100vw;
+    /* Full viewport width */
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    /* background-repeat: url("../Final/images/0001-0096.mkv"); */
+    background-image: url("./images/werf.png");
+    background-size: cover;
+    align-items: center;
+    /* overflow: auto;  */
+    z-index: 1;
+  }
+  
+  .form-labels2 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #f7f6f2;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    font-family: "Poppins-SemiBold";
+  }

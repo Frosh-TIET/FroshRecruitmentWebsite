@@ -44,13 +44,20 @@ function submitForm(e){
   var q8=getElementValue('q8');
   var talent_link=getElementValue('talent-link');
 
-  saveForm(name,emailid,rollno,phone,branch,cg,Adaptability,Resilience,Creativity,Time_Management,Decisiveness,q1,q2,q3,q4,q5,q6,q7,q8,talent_link);
+  var saveSuccessfull=saveForm(name,emailid,rollno,phone,branch,cg,Adaptability,Resilience,Creativity,Time_Management,Decisiveness,q1,q2,q3,q4,q5,q6,q7,q8,talent_link);
+  if(saveSuccessfull){
+    window.location.href = 'thankyou.html';
+  }
+  else{
+    alert("Form Submission Failed");
+  }
 
 }
 
 const saveForm=(name,emailid,rollno,phone,branch,cg,Adaptability,Resilience,Creativity,Time_Management,Decisiveness,q1,q2,q3,q4,q5,q6,q8,talent_link)=>{
   var newRecruitmentForm=recruitmentFormDB.push();
   console.log("inside save form function")
+  var saveSuccessfull=false;
   //console.log(name,emailid,rollno,phone,branch,cg,hostel,Adaptability,Resilience,Creativity,Time_Management,Decisiveness,q1,q2,q3,q4,q5,q6,q8,q9,q10,talent_link)
   newRecruitmentForm.set({
     "Name":name,
@@ -62,20 +69,23 @@ const saveForm=(name,emailid,rollno,phone,branch,cg,Adaptability,Resilience,Crea
     "DayScholar":hostel,
     "Adaptability":Adaptability,
     "Resilience":Resilience,
-    Creativity:Creativity,
-    TimeManagement:Time_Management,
-    Decisiveness:Decisiveness,
-    Question1:q1,
-    Question2:q2,
-    Question3:q3,
-    Question4:q4,
-    Question5:q5,
-    Question6:q6,
-    Question7:q7,
-    Question8:q8,
-    TalentLink:talent_link
+    "Creativity":Creativity,
+    "TimeManagement":Time_Management,
+    "Decisiveness":Decisiveness,
+    "Do you commute to campus regularly or use on-campus housing facilities?":q1,
+    "Why do you want to join Frosh?":q2,
+    "What are your soft skills and hard skills?":q3,
+    "What are you hoping to discover about yourself during your time in Frosh?":q4,
+    "What improvements do you suggest for Frosh 2023?":q5,
+    "If selected, how much time do you think you will need to devote to FROSH daily?":q6,
+    "According to you, who should be a part of Frosh 2024 according to you and why?":q7,
+    "According to you, who should not be a part of Frosh 2024 according to you and why?":q8,
+    "TalentLink":talent_link
   });
   console.log("Form Submitted");
+  saveSuccessfull=true;
+  return saveSuccessfull;
+
 
 
 };
