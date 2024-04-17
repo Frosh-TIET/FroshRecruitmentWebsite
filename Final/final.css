@@ -680,7 +680,8 @@ form input {
   display: flex;
   justify-content: center;
 }
-#demo{
+
+#demo {
   font-family: "Poppins-Semibold";
   font-size: 15px;
   margin-top: 0vh;
@@ -727,6 +728,7 @@ input[type="number"] {
   -moz-appearance: textfield;
   appearance: textfield;
 }
+
 @media only screen and (max-width: 768px) {
   #canvas3d {
     height: 90vh;
@@ -767,6 +769,7 @@ input[type="number"] {
     gap: 20px;
     display: block;
   }
+
   #canvas3d {
     height: 90vh;
     width: 100vw;
@@ -800,7 +803,9 @@ input[type="number"] {
   #fnumber,
   #femail,
   #fhostel,
-  #fcg ,#froll,#fbranch{
+  #fcg,
+  #froll,
+  #fbranch {
     font-family: "Poppins-Regular";
     display: flex;
     width: 160%;
@@ -845,20 +850,23 @@ input[type="number"] {
 }
 
 @media screen and (max-width: 480px) {
-  
+
   .container2 {
     background-size: cover;
     background-image: url("./images/werf_mobile.png");
   }
+
   body {
     overflow-x: hidden;
     /* overflow-y: hidden; */
   }
-  #no{
-    font-size :15px;
+
+  #no {
+    font-size: 15px;
     text-align: center;
     justify-content: center;
   }
+
   .formentryRadio {
     font-family: "Poppins-Regular";
     font-size: 12px;
@@ -905,7 +913,15 @@ input[type="number"] {
     /* margin-left: 50px; */
     justify-content: center;
   }
-  #q1,#q2,#q3,#q4,#q5,#q6,#q7,#q8{
+
+  #q1,
+  #q2,
+  #q3,
+  #q4,
+  #q5,
+  #q6,
+  #q7,
+  #q8 {
     justify-content: left;
     text-align: left;
   }
@@ -923,13 +939,15 @@ input[type="number"] {
     justify-self: center;
     text-align: center;
   }
-  .form-labels{
-    font-size:20px;
+
+  .form-labels {
+    font-size: 20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    text-align:center;
+    text-align: center;
   }
+
   /* form{
     height: 700px;
   } */
@@ -945,6 +963,15 @@ input[type="number"] {
     /* text-align: center/; */
     font-family: "Poppins-Regular";
   }
+  #preloader {
+    background: #000 url("./images/b6e0b072897469.5bf6e79950d23.gif") no-repeat center center;
+    background-size:30%;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: 100;
+  
+  }
 
   /* .submit-button{
     margin-bottom: 250px;
@@ -953,3 +980,12 @@ input[type="number"] {
 
 
 
+#preloader {
+  background: #000 url("./images/b6e0b072897469.5bf6e79950d23.gif") no-repeat center center;
+  background-size: 20%;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: 100;
+
+}
