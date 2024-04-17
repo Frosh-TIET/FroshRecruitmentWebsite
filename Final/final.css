@@ -113,7 +113,7 @@ body::-webkit-scrollbar {
   flex-direction: row-reverse;
   justify-content: center;
   /* background-repeat: url("../Final/images/0001-0096.mkv"); */
-  background-image: url("./images/werf.png");
+  background-image: url("./images/werf.webp");
   background-size: cover;
   align-items: center;
   /* overflow: auto;  */
@@ -597,7 +597,7 @@ form input {
   border: 2px;
   border-radius: 50px;
   font-family: "Poppins-Regular";
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
   transition-duration: 0.4s;
   margin-top: 5px;
@@ -609,7 +609,7 @@ form input {
 #show-button-1:hover,
 #show-button-2:hover {
   font-family: "Poppins-Regular";
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   background-color: #f7f6f2;
   color: #2b32b2;
@@ -774,7 +774,7 @@ input[type="number"] {
 
   .container2 {
     background-size: cover;
-    background-image: url("./images/werf_mobile.png");
+    background-image: url("./images/werf_mobile.webp");
   }
 
   .logo {
