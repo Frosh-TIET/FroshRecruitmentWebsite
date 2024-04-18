@@ -107,7 +107,11 @@ body::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
 }
-
+.mobile-gif {
+  display: none;
+  width: 100%;
+  height: auto;
+}
 .container2 {
   height: 100vh;
   /* Full viewport height */
@@ -853,8 +857,13 @@ input[type="number"] {
   } */
 }
 
-@media screen and (max-width: 480px) {
-
+@media screen and (max-width: 480px) {  
+  .desktop-video {
+    display: none;
+  }
+  .mobile-gif {
+    display: block;
+  }
   .container2 {
     background-size: cover;
     background-image: url("./images/werf_mobile.png");
