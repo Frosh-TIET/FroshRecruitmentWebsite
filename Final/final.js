@@ -57,8 +57,3 @@ window.addEventListener('scroll', function() {
 // }
 
 
-document.addEventListener('DOMContentLoaded', function() {
-  var myVideo = document.getElementById('myVideo');
-  myVideo.muted = true;
-  myVideo.play();
-});
