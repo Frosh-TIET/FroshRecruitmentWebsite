@@ -55,3 +55,10 @@ window.addEventListener('scroll', function() {
 //   // Otherwise, use large.mp4
 //   video.src = './Final/images/navansh.mp4';
 // }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  var myVideo = document.getElementById('myVideo');
+  myVideo.muted = true;
+  myVideo.play();
+});
