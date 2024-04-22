@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Final/final.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+        <div class="container1">
+            <div class="canvas-container" id="canvas3d">
+                <video autoplay muted loop playsinline id="myVideo" class="desktop-video">
+                  <source src="./Final/images/soham.mp4" type="video/mp4">
+                </video>
+                <img src="./Final/images/navansh.gif" alt="Description of GIF" class="mobile-gif">
+            </div>
+            <img src="./Final/images/arrow.png" alt="Arrow" class="arrow-image" id="scroll-down-arrow">
+            <div class="logo"></div>
+
+        </div>
+        <div class="container2 bg">
+            <img src="./Final/images/FROSH LOGO 23 AI white-png.png" alt="FROSH LOGO" class="logo" data-aos-delay="30"
+                data-aos="fade-right">
+            <!-- <div class="bg1" data-aos="fade-right"></div>
+        <div class="bg2" data-aos="fade-left"></div> -->
+
+            <!-- Form -->
+            <form action="" id="recruitmentForm">
+                <!--    data-aos-anchor-placement="top-center"> -->
+                <div class="card-inner">
+                    <div class="registration">RECRUITMENT FORM</div>
+                    <div class="details">Personal Details</div>
+
+                    <div class="content-personeldetails">
+                        <div class="formentry">
+                            <label for="fname" id="textefft">Full Name</label>
+                            <input type="text" id="fname" placeholder="Your Full Name" name="userName" required>
+                        </div>
+                        <div class="formentry">
+                            <label for="froll" id="textefft">Roll Number</label>
+                            <input type="number" id="froll" placeholder="eg. 1023XXXXX" name="userRollnumber"
+                                minlength="9" maxlength="9" required>
+                        </div>
+                        <div class="formentry">
+                            <label for="fbranch" id="textefft">Branch</label>
+                            <input type="text" id="fbranch" placeholder="e.g. ENC" name="userBranch" required>
+                        </div>
+                        <div class="formentry">
+                            <label for="fnumber" id="textefft">Mobile No.</label>
+                            <input type="tel" placeholder="Whatsapp Number" id="fnumber" name="userPhone" minlength="10"
+                                maxlength="10" required>
+                        </div>
+                        <div class="formentry">
+                            <label for="femail" id="textefft">Thapar ID</label>
+                            <input type="Email" id="femail" placeholder="@thapar.edu only" name="userEmail" required>
+                        </div>
+                        <div class="formentry">
+                            <label for="fcg" id="textefft">CGPA</label>
+                            <input type="number" id="fcg" placeholder="e.g. 8.36" name="userCg" min="0" max="10"
+                                step="any" required>
+                        </div>
+                    </div>
+
+                    <div class="tab">
+                        <h2 class="form-labels">Answer the following questions</h2>
+                        <h3 class="content-radio">Rate yourself on the following criteria <br>{1 being the lowest and 5
+                            being the highest}</h3>
+                        <br>
+                        <div class="form-radiobtns">
+                            <div class="formentryRadio">
+                                <label for="qualities" id="no">Adaptability</label>
+                                <div class="radio">
+                                    <label for="no" class="no">1</label>
+                                    <input class="short" type="radio" placeholder="" name="Adaptability" value="1"
+                                        id="Adaptability" required />
+                                    <label for="no" class="no">2</label>
+                                    <input class="short" type="radio" placeholder="" name="Adaptability" value="2"
+                                        id="Adaptability" required />
+                                    <label for="no" class="no">3</label>
+                                    <input class="short" type="radio" placeholder="" name="Adaptability" value="3"
+                                        id="Adaptability" required />
+                                    <label for="no" class="no">4</label>
+                                    <input class="short" type="radio" placeholder="" name="Adaptability" value="4"
+                                        id="Adaptability" required />
+                                    <label for="no" class="no">5</label>
+                                    <input class="short" type="radio" placeholder="" name="Adaptability" value="5"
+                                        id="Adaptability" required />
+                                </div>
+                            </div>
+
+
+                            <div class="formentryRadio">
+                                <label for="qualities" id="no">Resilience</label>
+                                <div class="radio">
+                                    <label for="no" class="no">1</label>
+                                    <input class="short" type="radio" placeholder="" name="resilience" value="1"
+                                        id="resilience" required />
+                                    <label for="no" class="no">2</label>
+                                    <input class="short" type="radio" placeholder="" name="resilience" value="2"
+                                        id="resilience" required />
+                                    <label for="no" class="no">3</label>
+                                    <input class="short" type="radio" placeholder="" name="resilience" value="3"
+                                        id="resilience" required />
+                                    <label for="no" class="no">4</label>
+                                    <input class="short" type="radio" placeholder="" name="resilience" value="4"
+                                        id="resilience" required />
+                                    <label for="no" class="no">5</label>
+                                    <input class="short" type="radio" placeholder="" name="resilience" value="5"
+                                        id="resilience" required />
+                                </div>
+                            </div>
+
+                            <div class="formentryRadio">
+                                <label for="qualities" id="no">Creativity</label>
+                                <div class="radio">
+                                    <label for="no" class="no">1</label>
+                                    <input class="short" type="radio" placeholder="" name="creativity" value="1"
+                                        id="creativity" required />
+                                    <label for="no" class="no">2</label>
+                                    <input class="short" type="radio" placeholder="" name="creativity" value="2"
+                                        id="creativity" required />
+                                    <label for="no" class="no">3</label>
+                                    <input class="short" type="radio" placeholder="" name="creativity" value="3"
+                                        id="creativity" required />
+                                    <label for="no" class="no">4</label>
+                                    <input class="short" type="radio" placeholder="" name="creativity" value="4"
+                                        id="creativity" required />
+                                    <label for="no" class="no">5</label>
+                                    <input class="short" type="radio" placeholder="" name="creativity" value="5"
+                                        id="creativity" required />
+                                </div>
+                            </div>
+
+
+                            <div class="formentryRadio">
+                                <label for="qualities" id="no">Time Management</label>
+                                <div class="radio">
+                                    <label for="no" class="no">1</label>
+                                    <input class="short" type="radio" placeholder="" name="timemanagement" value="1"
+                                        id="timemanagement" required />
+                                    <label for="no" class="no">2</label>
+                                    <input class="short" type="radio" placeholder="" name="timemanagement" value="2"
+                                        id="timemanagement" required />
+                                    <label for="no" class="no">3</label>
+                                    <input class="short" type="radio" placeholder="" name="timemanagement" value="3"
+                                        id="timemanagement" required />
+                                    <label for="no" class="no">4</label>
+                                    <input class="short" type="radio" placeholder="" name="timemanagement" value="4"
+                                        id="timemanagement" required />
+                                    <label for="no" class="no">5</label>
+                                    <input class="short" type="radio" placeholder="" name="timemanagement" value="5"
+                                        id="timemanagement" required />
+                                </div>
+                            </div>
+                            <div class="formentryRadio">
+                                <label for="qualities" id="no">Decisiveness</label>
+                                <div class="radio">
+                                    <label for="no" class="no">1</label>
+                                    <input class="short" type="radio" placeholder="" name="Decisiveness" value="1"
+                                        id="Decisiveness" required />
+                                    <label for="no" class="no">2</label>
+                                    <input class="short" type="radio" placeholder="" name="Decisiveness" value="2"
+                                        id="Decisiveness" required />
+                                    <label for="no" class="no">3</label>
+                                    <input class="short" type="radio" placeholder="" name="Decisiveness" value="3"
+                                        id="Decisiveness" required />
+                                    <label for="no" class="no">4</label>
+                                    <input class="short" type="radio" placeholder="" name="Decisiveness" value="4"
+                                        id="Decisiveness" required />
+                                    <label for="no" class="no">5</label>
+                                    <input class="short" type="radio" placeholder="" name="Decisiveness" value="5"
+                                        id="Decisiveness" required />
+                                </div>
+                            </div>
+
+
+                            <br>
+                            <br>
+                        </div>
+
+                        <h2 class="form-labels">Questions</h2>
+                        <div class="content-questions">
+                            <div class="formentryquestions">
+                                <label for="q1" id="textques">Do you commute to campus regularly or use on-campus
+                                    housing facilities?
+                                </label><br>
+                                <div class="textbox">
+                                    <input type="text" name="why" required id="q1" cols="20" rows="8"></input>
+                                </div>
+
+                            </div>
+
+                            <div class="formentryquestions">
+                                <label for="q2" id="textques">Why do you want to join Frosh?
+                                </label><br>
+                                <div class="textbox">
+                                    <input type="text" name="skills" required id="q2" cols="50" rows="8"></input>
+                                </div>
+                            </div>
+                            <div class="formentryquestions">
+                                <label for="q3" id="textques">What are your soft skills and hard skills?</label><br>
+                                <div class="textbox">
+                                    <input type="text" name="skills" required id="q3" cols="50" rows="8"></input>
+                                </div>
+                            </div>
+
+                            <div class="formentryquestions">
+                                <label for="q4" id="textques">What are you hoping to discover about yourself during your
+                                    time in Frosh?</label><br>
+                                <div class="textbox">
+                                    <input type="text" name="unique" required id="q4" cols="50" rows="8"></input>
+                                </div>
+                            </div>
+                            <div class="formentryquestions">
+                                <label for="q5" id="textques">What improvements do you suggest for Frosh 2023?
+                                </label><br>
+                                <div class="textbox">
+                                    <input type="text" name="improve" required id="q5" cols="50" rows="8"></input>
+                                </div>
+                            </div>
+                            <div class="formentryquestions">
+                                <label for="q6" id="textques">If selected, how much time do you think you will need to
+                                    devote to Frosh daily?</label><br>
+                                <div class="textbox">
+                                    <input type="text" name="society" required id="q6" cols="50" rows="8"></input>
+                                </div>
+                            </div>
+
+
+                            <!-- 
+                        <div class="formentryquestions">
+                            <label for="q7" id="textques">Are you part of any other societies? If yes, then describe
+                                your contribution in them.</label><br>
+                            <div class="textbox">
+                              <input type="text" name="new" required id="q7" cols="50" rows="8"></input>
+                            </div>
+                        </div>
+
+                        <div class="formentryquestions">
+                            <label for="q8" id="textques">What qualities of yours make you distinct from others?
+                            </label><br>
+                            <div class="textbox">
+                                <input type="text" name="who" required id="q8" cols="50" rows="8"></input>
+                            </div>
+
+                        </div> -->
+
+                            <div class="formentryquestions">
+                                <label for="q7" id="textques">
+                                    According to you, who should be a part of Frosh 2024 and why?
+                                </label><br>
+                                <div class="textbox">
+                                    <input type="text" name="whom" required id="q7" cols="50" rows="8"></input>
+                                </div>
+                            </div>
+
+                            <div class="formentryquestions">
+                                <label for="q8" id="textques">
+                                    According to you, who should not be a part of Frosh 2024 and why?
+                                </label><br>
+                                <div class="textbox">
+                                    <input type="text" name="whom" required id="q8" cols="50" rows="8"></input>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab">
+                        <div class="formbody">
+                            <h2 class="form-labels2">Do you wish to make a Talent Entry? <br>(Your talents may include
+                                anything you are skilled in like singing, dancing, acting, graphic design,
+                                cinematography, Web/App
+                                Dev, etc.)</h2>
+                            <div class="form-buttons">
+                                <button type="button" id="show-button-1" onclick="talentYes()"
+                                    class="startlink">YES</button>
+                                <button type="button" id="show-button-2" onclick="talentNo()"
+                                    class="startlink">NO</button>
+                            </div>
+                            <div id="talent-text"></div>
+                            <input type="text" id="talent-link" style="display: none;" placeholder="Add you link here">
+                            <h1 class="form-labels23">Final Submission</h1>
+                            <div class="submitBtn">
+                                <button type="submit" class="submit-button">Submit</button>
+                            </div>
+                            <div id="demo"></div>
+                        </div>
+                    </div>
+            </form>
+        </div>
+
+        <script>
+            var loader = document.getElementById("preloader");
+            
+            // Only set the timeout if the loader is not already hidden
+            if (loader.style.display !== "none") {
+              setTimeout(function () {
+                loader.style.display = "none";
+              }, 5000);
+            }
+          </script>
+        <script>
+
+            function submitFunction() {
+                var txt;
+                if (confirm("Are you sure you want to submit?")) {
+                    txt = "Your response has been succesfully submited :)";
+                } else {
+                    txt = "You response has not been submited :/";
+                }
+                document.getElementById("demo").innerHTML = txt;
+            }
+
+            function talentYes() {
+                document.getElementById("talent-text").innerHTML = `
+    <div class="instructions">
+        <h2 class="form-labels"><br>Instructions</h2>
+        <ul>
+        <li>Students selected through the talent round can avoid appearing in the GD round.</li>
+        <li>Students applying through this route must submit the photos/videos of their talents through a Drive link/Github profile link, in the recruitment form itself.</li>
+        <li>Any talent is welcomed; including acting, dancing, videography, cinematography, designing, singing, etc.</li>
+        <li>The length of the video should not exceed 45 seconds, with 5 seconds of introduction (including name, roll no., talent represented) written on an A4 sheet of paper.</li>
+        <li>The submission should be under the name: "NAME_TALENT_ROLL NO." </li>
+        <li>If a student submits a talent entry and is not selected, he/she will still be eligible for the GD round.</li>
+        </ul>
+    </div>
+  `;
+
+                document.getElementById("talent-link").style.display = "flex";
+                //window.scrollBy(0, 20000); 
+            }
+
+            function talentNo() {
+                document.getElementById("talent-text").innerHTML = "That's okay. You can always showcase your talent later!";
+                document.getElementById("talent-link").style.display = "none";
+            }
+
+        </script>
+        <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+        <script type="importmap">
+        {
+            "imports": {
+                "@splinetool/runtime": "https://unpkg.com/@splinetool/runtime@1.0.53/build/runtime.js"
+            }
+        }
+    </script>
+        <script type="module" src="./Final/final.js"></script>
+        <script type="module" src="./Final/database.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
+
+        <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
+        <!-- <script>
+        AOS.init();
+    </script> -->
+</body>
+
+</html>
